@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Pre Workout Capsules",
+    "price": 10.00,
+    "category": "pre-workout",
+    "image": "images/products/p1.png"
+  },
+  {
+    "id": 2,
+    "name": "Pre Workout Capsules",
+    "price": 15.00,
+    "category": "pre-workout",
+    "image": "images/products/p2.png"
+  },
+  {
+    "id": 3,
+    "name": "Post Workout Capsules",
+    "price": 10.00,
+    "category": "post-workout",
+    "image": "images/products/p3.png"
+  },
+  {
+    "id": 4,
+    "name": "Muscle Supplement",
+    "price": 15.00,
+    "category": "muscle-supple",
+    "image": "images/products/p4.png"
+  },
+  {
+    "id": 5,
+    "name": "Pre Workout Capsules",
+    "price": 17.00,
+    "category": "pre-workout combo-product",
+    "image": "images/products/p5.png"
+  },
+  {
+    "id": 6,
+    "name": "Pre Workout Capsules",
+    "price": 25.00,
+    "category": "pre-workout combo-product",
+    "image": "images/products/p6.png"
+  },
+  {
+    "id": 7,
+    "name": "Post Workout Capsules",
+    "price": 17.00,
+    "category": "post-workout combo-product",
+    "image": "images/products/p7.png"
+  },
+  {
+    "id": 8,
+    "name": "Muscle Supplements",
+    "price": 25.00,
+    "category": "muscle-supple combo-product",
+    "image": "images/products/p8.png"
+  }
+]

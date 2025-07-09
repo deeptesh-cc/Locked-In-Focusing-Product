@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home | Locked In Focusing Product</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <div class="preloader"></div>
+
+        <header class="main-header header-style-one">
+            <div class="outer-box">
+
+                <div class="header-lower">
+
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+                            <div class="logo-white"><a href="index.html"><img src="images/logo-2.png" alt="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation">
+                                    <li><a href="index.html">Home</a></li>
+
+                                            <li><a href="shop-products.html">Products</a></li>
+
+                                            <li><a href="terms.html">Terms</a></li>
+
+                                            <li><a href="privacy-policy.html">Privacy</a></li>
+
+                                            <li><a href="contact.html">Contact Us</a></li>
+
+                                    <!-- <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            <li><a href="page-services.html">Services List</a></li>
+                                            <li><a href="page-service-details.html">Service Details</a></li>
+                                        </ul>
+                                    </li> -->
+                                   
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="outer-box">
+
+                            <!-- <button class="ui-btn search-btn">
+                            <i class="icon fal fa-search"></i>
+                            </button> -->
+
+                            <a class="ui-btn" href="login.html">
+                                <i class="icon fal fa-user"></i>
+                            </a>
+
+                            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" class="ui-btn">
+                                <span id="cart-count" class="cart-count">0</span>
+                                <i class="icon fal fa-shopping-cart"></i>
+                            </button>
+
+                            <a class="ui-btn" href="wishlist-page.html">
+                                <span id="wish-count">0</span>
+                                <i class="icon fal fa-heart"></i>
+                            </a>
+                            <div class="divider"></div>
+
+                            <!-- <div class="btn-box">
+                                <a href="page-contact.html" class="theme-btn btn-style-one btn-style-transparent"><span class="btn-title">CONTACT US</span></a>
+                            </div> -->
+
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+                    <ul class="navigation clearfix">
+
+                    </ul>
+                    <ul class="contact-list-one">
+                        <li>
+                            <i class="icon lnr-icon-envelope1"></i>
+                            <span class="title">Send Email</span>
+                            <div class="text"><a href="/cdn-cgi/l/email-protection#acc0cddbdfc3c2ecc9d4cdc1dcc0c982cfc3c1"><span class="__cf_email__" data-cfemail="75141918145b191402061a1b35100d14180519105b161a18">alma.lawson@example.com</span></a></div>
+                        </li>
+                    </ul>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="icon fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-vimeo-v"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="search-popup">
+                <span class="search-back-drop"></span>
+                <button class="close-search"><span class="fa fa-times"></span></button>
+                <div class="search-inner">
+                    <form method="post" action="index.html">
+                        <div class="form-group">
+                            <input type="search" name="search-field" value placeholder="Search..." required>
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                <h4 class="offcanvas-title">Your Cart!</h4>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-0">
+                 <div id="cart-items" class="cart-scroll-area custom-scroll">
+
+                 </div>
+                 <div id="cart-total-area">
+                    <p class="my-3 p-2 border-top d-flex justify-content-between text-dark">Subtotal: <strong>$<strong id="cart-total">0</strong></strong></p>
+
+                    <div class="row row-cols-1 row-cols-sm-2 g-2">
+                        <div class="col">
+                            <a href="shop-cart.html" class="theme-btn btn-style-one w-100"><span class="btn-title">view cart</span></a>
+                            </div>
+                    <div class="col">
+                    <a href="shop-checkout.html" class="theme-btn btn-style-one w-100"><span class="btn-title">checkout</span></a>
+                    </div>
+                    </div>
+                </div>
+              </div> 
+            </div>  
+
+
+
+        </header>
+
+
+        <section class="banner-section-one heroBanArea">
+            <div class="container">
+                <div class="row">
+                 <div class="content-box col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                             
+                                <span class="sub-title animate-2">Designed for Superior Results</span>
+                                <h1 class="title animate-3">Locked In Focusing Product</h1>
+                                <div class="text animate-4">Join Us On Your Fitness Journey, And Explore How Our Products May Enhance Your Workout Experience And Contribute To Your Overall Well-Being.</div>
+                                <div class="btn-box animate-5">
+                                    <a href="shop-products.html" class="theme-btn btn-style-one"><span class="btn-title">Shop Now</span></a>
+                                </div>
+                            </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 position-relative align-self-end">
+                    <div class="hero-feat-bg position-absolute wow fadeInDown">
+                        <img src="images/background/hero-feat-bg.png" class="img-fluid" loading="lazy">
+                    </div>
+                    <img src="images/background/hero-feat.png" class="img-fluid position-relative wow fadeInUp" loading="lazy" data-wow-delay="1500ms">
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        
+
+<section class="aboutArea sec-pad pb-0 wow fadeInUp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-end">
+                <div class="about-feat position-relative wow fadeInUp" data-wow-delay="1000ms">
+                    <img src="images/about/about-img.png" loading="lazy">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="sec-pad pt-0">
+                <div class="sec-title">
+                    <span class="sub-title">Designed for Superior Results</span>
+                    <h2 class="words-slide-up text-split">Elevating Fitness with Every Scoop</h2>
+                </div>
+                <p>
+                    At Locked In Focusing Products, we’re not just selling supplements – we’re fueling transformation. Built by fitness lovers for fitness warriors, our mission is simple: deliver premium, science-backed workout supplements that help you crush your goals and unlock your peak performance. Whether you’re pushing for your first PR or chasing your next big milestone, we’ve got your back with clean, powerful formulas you can trust. No fluff, no shortcuts – just real results. Let’s build strength, stamina, and success together.
+                </p>
+                                <div class="btn-box mt-4">
+                                    <a href="shop-products.html" class="theme-btn btn-style-one"><span class="btn-title">Shop Now</span></a>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="featuredBlockArea sec-pad">
+    <div class="container wow fadeInUp">
+        <div class="sec-title text-center">
+                    <span class="sub-title">Highlights of our products</span>
+                    <h2 class="words-slide-up text-split text-white">Discover Your Strength Path</h2>
+                </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="featBlockWrap wow fadeInLeft" data-wow-delay="1000ms">
+                <img src="images/background/featured-block-1.jpg" loading="lazy" class="img-fluid">
+                <div class="overlayContent">
+                <h3 class="text-white">Max Out <br> Muscle</h3>
+                <a href="shop-products.html">
+                    <span class="fas fa-arrow-right"></span>
+                </a>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="featBlockWrap wow fadeInLeft" data-wow-delay="1500ms">
+                    
+                <img src="images/background/featured-block-2.jpg" loading="lazy" class="img-fluid">
+                <div class="overlayContent">
+                        <h3 class="text-white">Unleash <br> Pure <br> Power</h3>
+                        <a href="shop-products.html">
+                                <span class="fas fa-arrow-right"></span>
+                                </a>
+                    </div>
+                    
+                </div>
+                <div class="featBlockWrap wow fadeInLeft" data-wow-delay="2000ms">
+                    
+                <img src="images/background/featured-block-3.jpg" loading="lazy" class="img-fluid">
+                <div class="overlayContent">
+                        <h3 class="text-white">Strength. <br> Reinvented.</h3>
+                        <a href="shop-products.html">
+                            <span class="fas fa-arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section class="product-section sec-pad home">
+            <div class="container wow fadeInUp">
+                <div class="sec-title text-center">
+                    <span class="sub-title">Designed for Superior Results</span>
+                    <h2 class="words-slide-up text-split">Most Popular Products</h2>
+                </div>
+                <div class="product-carousel owl-carousel owl-theme" id="product-list">
+                    
+
+                        <!-- <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="1" data-name="Pre Workout Capsules" data-price="10.00" data-image="images/products/p1.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p1.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Pre Workout Capsules</a></h4>
+                                        <span class="price"><del>$19.00</del> $10.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+
+                         <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="2" data-name="Pre Workout Capsules" data-price="15.00" data-image="images/products/p2.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p2.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Pre Workout Capsules</a></h4>
+                                        <span class="price"><del>$29.00</del> $15.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="3" data-name="Post Workout Capsules" data-price="10.00" data-image="images/products/p3.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p3.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Post Workout Capsules</a></h4>
+                                        <span class="price"><del>$19.00</del> $10.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="4" data-name="Muscle Supplement" data-price="15.00" data-image="images/products/p4.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p4.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Muscle Supplement</a></h4>
+                                        <span class="price"><del>$29.00</del> $15.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div> -->
+                        
+
+                </div>
+                        <div class="btn-box mt-4 text-center">
+                                    <a href="shop-products.html" class="theme-btn btn-style-one"><span class="btn-title">View More</span></a>
+                                </div>
+            </div>
+        </section>
+
+
+        <section class="keyFeaturesArea sec-pad ">
+            <div class="container position-relative">
+                <div class="sec-title text-center wow fadeInUp">
+                    <span class="sub-title">Unleashing Your Full Potential</span>
+                    <h2 class="words-slide-up text-split">Key Features of Supplements</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                    <div class="col">
+                        <div class="featureBlock wow fadeInUp">
+                            <div class="icon-box">
+                                <img src="images/icons/key-feat-ico1.svg" loading="lazy" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h4>Maximized Muscle Growth</h4>
+                                <p>Experience faster muscle gains with our supplement, packed with nutrients that support enhanced muscle development.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col">
+                        <div class="featureBlock wow fadeInUp" data-wow-delay="1000ms">
+                            <div class="icon-box">
+                                <img src="images/icons/key-feat-ico2.svg" loading="lazy" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h4>Accelerated Recovery</h4>
+                                <p>Reduce downtime between workouts with ingredients designed to speed up muscle recovery and repair.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="featureBlock wow fadeInUp" data-wow-delay="1500ms">
+                            <div class="icon-box">
+                                <img src="images/icons/key-feat-ico3.svg" loading="lazy" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h4>Enhanced Endurance</h4>
+                                <p>Push through your toughest workouts with a formula that boosts stamina and energy levels for sustained performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="featureBlock wow fadeInUp" data-wow-delay="2000ms">
+                            <div class="icon-box">
+                                <img src="images/icons/key-feat-ico4.svg" loading="lazy" class="img-fluid">
+                            </div>
+                            <div class="content-box">
+                                <h4>Optimal Nutrient Absorption</h4>
+                                <p>Our supplement is designed to ensure your body efficiently absorbs essential nutrients for maximum effectiveness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="feat-img position-relative wow fadeInUp" style="z-index: 1;" data-wow-delay="2700ms">
+                    <img src="images/background/key-feat-img.png" loading="lazy" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="marquee-section-two">
+            <div class="marquee-two">
+                <div class="marquee-group">
+                    <div class="text" data-text="Mesotherapy">Proven Power</div>
+                    <div class="text" data-text="Treatments">Peak Performance</div>
+                    <div class="text" data-text="Relax">Clean Energy</div>
+                    <div class="text" data-text="Manicure">Rapid Recovery</div>
+                </div>
+                <div aria-hidden="true" class="marquee-group">
+                    <div class="text" data-text="Mesotherapy">Elite Quality</div>
+                    <div class="text" data-text="Treatments">Pure Ingredients</div>
+                    <div class="text" data-text="Relax">Trusted Worldwide</div>
+                    <div class="text" data-text="Mesotherapy">Proven Power</div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="product-section sec-pad home">
+            <div class="container wow fadeInUp">
+                <div class="sec-title text-center">
+                    <span class="sub-title">Designed for Superior Results</span>
+                    <h2 class="words-slide-up text-split">Explore Our Supplement Combos</h2>
+                </div>
+                <div class="product-carousel owl-carousel owl-theme" id="product-list2">
+                   
+                    
+                        <!-- <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="5" data-name="Pre Workout Capsules" data-price="17.00" data-image="images/products/p5.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p5.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Pre Workout Capsules</a></h4>
+                                        <span class="price"><del>$20.00</del> $17.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+
+                         <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="6" data-name="Pre Workout Capsules" data-price="25.00" data-image="images/products/p6.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p6.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Pre Workout Capsules</a></h4>
+                                        <span class="price"><del>$30.00</del> $25.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="7" data-name="Post Workout Capsules" data-price="17.00" data-image="images/products/p7.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p7.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Post Workout Capsules</a></h4>
+                                        <span class="price"><del>$20.00</del> $17.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+
+                        <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-id="8" data-name="Muscle Supplements" data-price="25.00" data-image="images/products/p8.png">
+                            <div class="inner-box bg-transparent">
+                                <div class="image-area">
+                                    <figure class="image mb-0"><a href="product-details.html"><img src="images/products/p8.png" alt="Image"></a></figure>
+                                    <button class="icon like-btn add-to-wishlist"><i class="fa-light fa-heart"></i></button>
+                                </div>
+                                <div class="content-box">
+                                    <div class="inner">
+                                        <h4 class="title"><a href="product-details.html">Muscle Supplements</a></h4>
+                                        <span class="price"><del>$30.00</del> $25.00</span>
+                                        
+                                    </div>
+                                </div>
+                                    <div class="action-btns-area">
+                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            
+                                        </div>
+                            </div>
+                        </div> -->
+                        
+
+                </div>
+                        <div class="btn-box mt-4 text-center">
+                                    <a href="shop-products.html" class="theme-btn btn-style-one"><span class="btn-title">View More</span></a>
+                                </div>
+            </div>
+        </section>
+
+        <section class="counterArea sec-pad">
+            <div class="container">
+                <div class="row justify-content-arround">
+                    <div class="col-lg-6">
+                        <div class="sec-title mb-0 wow fadeInUp">
+                            <span class="sub-title">Unlock Your Ultimate Potential</span>
+                            <h2 class="words-slide-up text-split text-white">Your Journey to Power Begins Now</h2>
+                            <p class="text-white lead">Ready to break limits and build the body you deserve? Power your journey with supplements made for real results.</p>
+                            <div class="btn-box mt-4">
+                                    <a href="shop-products.html" class="theme-btn btn-style-one"><span class="btn-title">Explore Supplements</span></a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 mx-auto align-self-center">
+                        <div class="row row-cols-1 row-cols-lg-3 wow fadeInUp" data-wow-delay="1000ms">
+                        <div class="counter-block-two col">
+                            <div class="inner">
+                                <div class="inner-content">
+                                    <div class="count-box"><span class="count-text" data-speed="3000" data-stop="455">0</span><span class="sup">k+</span></div>
+                                    <h4 class="counter-title">Happy Customers</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="counter-block-two col">
+                            <div class="inner">
+                                <div class="inner-content">
+                                    <div class="count-box"><span class="count-text" data-speed="3000" data-stop="3560">0</span><span class="sup">km+</span></div>
+                                    <h4 class="counter-title">Packages Delivered</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="counter-block-two col">
+                            <div class="inner ms-lg-3">
+                                <div class="inner-content">
+                                    <div class="count-box"><span class="count-text" data-speed="3000" data-stop="39">0</span><span class="sup">years+</span></div>
+                                    <h4 class="counter-title">In the Industry</h4>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonialArea testimonial-section-three sec-pad">
+            
+            <div class="container position-relative wow fadeInUp">
+                <div class="row">
+                <div class="col-lg-6 align-self-center pe-lg-5">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                        <div class="col">
+                            <div class="review-plat-block text-center">
+                                <div class="d-flex justify-content-center mb-2">
+                                <img src="images/icons/google-logo.svg" class="img-fluid" loading="lazy">
+                                <div class="info">
+                                    <img src="images/icons/star-rating.svg" class="img-fluid" loading="lazy">
+                                    <p class="mb-0">(4.5/1208)</p>
+                                </div>
+                                </div>
+                                <a href="#">See Reviews <span class="far fa-arrow-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="review-plat-block text-center">
+                                <div class="d-flex justify-content-center mb-2">
+                                <img src="images/icons/Amazon_logo..svg" class="img-fluid" loading="lazy">
+                                <div class="info">
+                                    <img src="images/icons/star-rating.svg" class="img-fluid" loading="lazy">
+                                    <p class="mb-0">(4.2/9208)</p>
+                                </div>
+                                </div>
+                                <a href="#">See Reviews <span class="far fa-arrow-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="review-plat-block text-center">
+                                <div class="d-flex justify-content-center mb-2">
+                                <img src="images/icons/Flipkart_logo.svg" class="img-fluid" loading="lazy">
+                                <div class="info">
+                                    <img src="images/icons/star-rating.svg" class="img-fluid" loading="lazy">
+                                    <p class="mb-0">(4.1/208)</p>
+                                </div>
+                                </div>
+                                <a href="#">See Reviews <span class="far fa-arrow-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="review-plat-block text-center">
+                                <div class="d-flex justify-content-center mb-2">
+                                <img src="images/icons/alibaba-logo.svg" class="img-fluid" loading="lazy">
+                                <div class="info">
+                                    <img src="images/icons/star-rating.svg" class="img-fluid" loading="lazy">
+                                    <p class="mb-0">(4.0/908)</p>
+                                </div>
+                                </div>
+                                <a href="#">See Reviews <span class="far fa-arrow-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                <div class="sec-title">
+                    <span class="sub-title">Testimonial</span>
+                    <h2 class="words-slide-up text-split">Our Happy Customers</h2>
+                </div>
+                <div class="carousel-outer position-relative">
+                    <div class="testimonial-carousel-two owl-carousel owl-theme">
+
+                        <div class="testimonial-block-three">
+                            <div class="inner-box">
+                               
+                                <div class="info-box">
+                                    <div class="text">I started using this supplement after a friend’s recommendation, and I’m honestly impressed. My strength and focus have both improved, and I feel more active even outside the gym. It’s made recovery so much easier. What I love most is that it doesn’t upset my stomach and gives me lasting energy without jitters. Definitely keeping this in my routine!</div>
+                                    <div class="author-area d-flex align-items-start">
+                                    <img src="images/icons/Google__G__logo.png" class="img-fluid ico">
+                                    <div class="ps-2">
+                                    <p class="name lead">Angela Lipton</p>
+                                    <span class="designation">Google Reviews</span>
+                                    <img src="images/icons/star-rating.svg" class="img-fluid raing">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-block-three">
+                            <div class="inner-box">
+                               
+                                <div class="info-box">
+                                    <div class="text">I’ve tried several supplements over the years, but this one stands out. My stamina has increased, recovery is faster, and I feel more focused during workouts. The taste is smooth, and it mixes easily with my shakes. No bloating or crash later—just clean, consistent energy and muscle support. It’s now a core part of my daily routine.</div>
+                                    <div class="author-area d-flex align-items-start">
+                                    <img src="images/icons/Google__G__logo.png" class="img-fluid ico">
+                                    <div class="ps-2">
+                                    <p class="name lead">Jason Miller</p>
+                                    <span class="designation">Google Reviews</span>
+                                    <img src="images/icons/star-rating.svg" class="img-fluid raing">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-block-three">
+                            <div class="inner-box">
+                               
+                                <div class="info-box">
+                                    <div class="text">This supplement truly elevated my performance at the gym. I noticed significant muscle gain within weeks and feel less soreness after intense sessions. It’s easy on the stomach, tastes great, and doesn’t feel artificial like many others. My workouts are more productive and I recover quicker. Honestly, it’s the best investment I’ve made for my health so far!</div>
+                                    <div class="author-area d-flex align-items-start">
+                                    <img src="images/icons/Google__G__logo.png" class="img-fluid ico">
+                                    <div class="ps-2">
+                                    <p class="name lead">Emily Carter</p>
+                                    <span class="designation">Google Reviews</span>
+                                    <img src="images/icons/star-rating.svg" class="img-fluid raing">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-block-three">
+                            <div class="inner-box">
+                               
+                                <div class="info-box">
+                                    <div class="text">I was a bit hesitant to try supplements again, but this one exceeded expectations. It fuels my workouts, improves endurance, and supports clean muscle gain. I’ve been using it daily for two months now and the results are clearly visible. It also blends perfectly with water—no lumps or weird texture. Highly recommend it to anyone serious about fitness.</div>
+                                    <div class="author-area d-flex align-items-start">
+                                    <img src="images/icons/Google__G__logo.png" class="img-fluid ico">
+                                    <div class="ps-2">
+                                    <p class="name lead">Liam Anderson</p>
+                                    <span class="designation">Google Reviews</span>
+                                    <img src="images/icons/star-rating.svg" class="img-fluid raing">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="faqArea sec-pad">
+            <div class="container">
+                 <div class="sec-title text-center">
+                                    <span class="sub-title">frequently asked questions</span>
+                                    <h2>Most Asked Questions</h2>
+                                </div>
+                <div class="outer-box">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <img src="images/background/Faq-feat.png" class="img-fluid" loading="lazy">
+                        </div>
+
+                        <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                            <div class="inner-column wow fadeInRight">
+                               
+                                <ul class="accordion-box style-three">
+
+                                    <li class="accordion block">
+                                        <div class="acc-btn active">What are the benefits of using muscle supplements? <i class="arrow fa fa-arrow-right"></i></div>
+                                        <div class="acc-content current">
+                                            <div class="content">
+                                                <div class="text">Muscle supplements may support muscle growth, improve workout performance, boost recovery, and provide essential nutrients to help achieve fitness goals more efficiently and effectively.</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion block">
+                                <div class="acc-btn">Are your supplements safe to use? <i class="arrow fa fa-arrow-right"></i></div>
+                                        <div class="acc-content">
+                                            <div class="content">
+                                                <div class="text">Yes, our supplements are made with high-quality ingredients and manufactured under strict standards. However, we recommend consulting a healthcare professional before use, especially if you have medical conditions.</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion block border-0">
+                                        <div class="acc-btn">How should I take the supplements for best results? <i class="arrow fa fa-arrow-right"></i></div>
+                                        <div class="acc-content">
+                                            <div class="content">
+                                                <div class="text">For best results, follow the recommended dosage on the label. Take consistently, stay hydrated, and combine with a balanced diet and regular exercise for optimal performance and recovery.</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="accordion block border-0">
+                                        <div class="acc-btn">Do you offer any discounts or promotions? <i class="arrow fa fa-arrow-right"></i></div>
+                                        <div class="acc-content">
+                                            <div class="content">
+                                                <div class="text">Yes, we frequently run discounts and special offers. Subscribe to our newsletter or check our website regularly to stay updated on ongoing deals and seasonal promotions.</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+ <footer class="main-footer footer-style-two">
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget about-widget">
+                                <div class="logo"><a href="index.html"><img src="images/logo-2.png" alt></a></div>
+                                <div class="text">At Locked In Focusing Products, we’re not just selling supplements – we’re fueling transformation</div>
+                                
+                                
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-whatsapp-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>  
+                            </ul>
+                        </div>
+
+                        <div class="footer-column offset-xl-1 col-xl-2 col-sm-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Quick Links</h4>
+                                <ul class="user-links">
+                            
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-products.html">Products</a></li>
+                                    <li><a href="terms.html">Terms</a></li>
+                                    <li><a href="privacy-policy.html">Privacy</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                         
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Contact Info</h4>
+                               <ul class="user-links contact-links">
+                            
+                                    <li  class="d-flex"><i class="fa-regular fa-envelope"></i> 
+                                        <a href="mailto:info@lockedinproduct.com">info@lockedinproduct.com</a></li>
+                                    <li class="d-flex">
+                                        <i class="fa-regular fa-phone"></i>
+                                        <a href="tel:18005779667">(1800) 577 9667</a></li>
+
+                                    <li class="d-flex">
+                                        <i class="fa-regular fa-location"></i>
+                                        <a href="#">34 Carmine Street, New York, NY 10014</a></li>
+                         
+                                </ul>
+                            </div>
+                        </div>
+                        
+                         <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">Subcribe Newsletter</h4>
+                                <div class="subscribe-form">
+                                    <form method="post" action="#">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="email" value placeholder="Enter Your E-mail" required>
+                                            <button type="button" class="theme-btn"><span class="btn-title"><i class="fa-sharp fa-thin fa-paper-plane"></i></span></button>
+                                            <small class="text-muted">We do not spam. We send offers instead.</small>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="inner-container">
+                        <!-- <div class="row"> -->
+                        <div class="col-md-6 ">
+                        <div class="copyright-text text-md-start">
+                        Copyright &copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved
+                        </div>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                        <div class="d-inline-block">
+                        <span>Secure Payments With:</span>
+                        <img src="images/icons/payments.svg" alt="" class="img-fluid">
+                        </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+       
+    </div>
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+   
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/bxslider.js"></script>
+    <script src="js/splitType.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/ecom.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.form.min.js"></script> -->
+    
+</body>
+
+</html>

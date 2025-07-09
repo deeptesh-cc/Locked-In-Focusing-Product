@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cart | Locked In Focusing Product</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<div class="page-wrapper">
+
+<div class="preloader"></div>
+
+        <header class="main-header header-style-one">
+            <div class="outer-box">
+
+                <div class="header-lower">
+
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+                            <div class="logo-white"><a href="index.html"><img src="images/logo-2.png" alt="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation">
+                                    <li><a href="index.html">Home</a></li>
+
+                                            <li><a href="shop-products.html">Products</a></li>
+
+                                            <li><a href="terms.html">Terms</a></li>
+
+                                            <li><a href="privacy-policy.html">Privacy</a></li>
+
+                                            <li><a href="contact.html">Contact Us</a></li>
+
+                                    <!-- <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            <li><a href="page-services.html">Services List</a></li>
+                                            <li><a href="page-service-details.html">Service Details</a></li>
+                                        </ul>
+                                    </li> -->
+                                   
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="outer-box">
+
+                            <!-- <button class="ui-btn search-btn">
+                            <i class="icon fal fa-search"></i>
+                            </button> -->
+
+                            <a class="ui-btn" href="login.html">
+                                <i class="icon fal fa-user"></i>
+                            </a>
+
+                            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" class="ui-btn">
+                                <span id="cart-count" class="cart-count">0</span>
+                                <i class="icon fal fa-shopping-cart"></i>
+                            </button>
+
+                            <a class="ui-btn" href="wishlist-page.html">
+                                <span id="wish-count">0</span>
+                                <i class="icon fal fa-heart"></i>
+                            </a>
+                            <div class="divider"></div>
+
+                            <!-- <div class="btn-box">
+                                <a href="page-contact.html" class="theme-btn btn-style-one btn-style-transparent"><span class="btn-title">CONTACT US</span></a>
+                            </div> -->
+
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+                    <ul class="navigation clearfix">
+
+                    </ul>
+                    <ul class="contact-list-one">
+                        <li>
+                            <i class="icon lnr-icon-envelope1"></i>
+                            <span class="title">Send Email</span>
+                            <div class="text"><a href="/cdn-cgi/l/email-protection#acc0cddbdfc3c2ecc9d4cdc1dcc0c982cfc3c1"><span class="__cf_email__" data-cfemail="75141918145b191402061a1b35100d14180519105b161a18">alma.lawson@example.com</span></a></div>
+                        </li>
+                    </ul>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="icon fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-vimeo-v"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="search-popup">
+                <span class="search-back-drop"></span>
+                <button class="close-search"><span class="fa fa-times"></span></button>
+                <div class="search-inner">
+                    <form method="post" action="index.html">
+                        <div class="form-group">
+                            <input type="search" name="search-field" value placeholder="Search..." required>
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                <h4 class="offcanvas-title">Your Cart!</h4>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-0">
+                 <div id="cart-items" class="cart-scroll-area custom-scroll">
+
+                 </div>
+                 <div id="cart-total-area">
+                    <p class="my-3 p-2 border-top d-flex justify-content-between text-dark">Subtotal: <strong>$<strong id="cart-total">0</strong></strong></p>
+
+                    <div class="row row-cols-1 row-cols-sm-2 g-2">
+                        <div class="col">
+                            <a href="shop-cart.html" class="theme-btn btn-style-one w-100"><span class="btn-title">view cart</span></a>
+                            </div>
+                    <div class="col">
+                    <a href="shop-checkout.html" class="theme-btn btn-style-one w-100"><span class="btn-title">checkout</span></a>
+                    </div>
+                    </div>
+                </div>
+              </div> 
+            </div>  
+
+
+
+        </header>
+
+<section class="page-title" style="background-image: url(images/about/page-title-bg.png);">
+            <div class="image-curve"></div>
+            <div class="auto-container">
+            <div class="title-outer text-center">
+            <h1 class="title">Your Cart</h1>
+            <ul class="page-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Cart</li>
+            </ul>
+            </div>
+            </div>
+            </section>
+
+<section class="page-cart section-gap-tb">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-7 col-xl-7">
+    <div id="cart-items-2">
+        <!-- <div class="cart_item">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="image-area">
+                    <a href="#"><img alt="${item.name}" src="${item.image}"></a>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="cont-area">
+                    <h5 class="product-name">${item.name}</h5>
+                    <p><strong>Brand:</strong> <span>Lockedin Focusing Product</span></p>
+                    <div class="rating">
+                                                <img src="images/icons/star-rating.svg" width="87" class="d-inline-block">
+                                                <span>(4.2)</span>
+                                                </div>
+                    <div class="product-quantity">
+                    <div class="product-details__quantity">
+                    <div class="quantity-box">
+                                                <button class="quantity-decrease sub" data-id="${item.id}">-</button>
+                                                <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
+                                                <button class="quantity-increase add" data-id="${item.id}">+</button>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="product-subtotal"><span class="amount">$${item.price.toFixed(2)}</span></div>
+
+                    <button title="Remove this item" class="remove remove-from-cart" data-id="${item.id}">Remove</button>
+                </div>
+            </div>
+        </div>
+    
+        </div> -->
+    </div>
+</div>
+
+<div class="col-md-5 col-xl-4">
+<div class="cart-summary-area">
+    <h4 class="mb-4">Cart Summery</h4>
+    <ul>
+        <li class="d-flex justify-content-between flex-wrap mb-2">
+            <div>
+                Cart Subtotal
+            </div>
+            <div>
+               <strong>$<span id="cart-sub-total">0</span></strong>
+            </div>
+        </li>
+        <li class="d-flex justify-content-between flex-wrap mb-2">
+            <div>
+                Shipping and Handling
+            </div>
+            <div>
+               <strong>FREE</strong>
+            </div>
+        </li>
+        <li class="d-flex justify-content-between flex-wrap lead pb-4 mt-2 pt-2 border-top">
+            <div>
+                <strong>Order Total</strong>
+            </div>
+            <div>
+               <strong>$<span id="cart-total2">0</span></strong>
+            </div>
+        </li>
+    </ul>
+    <div class="d-inline-block text-center pb-3 w-100">
+                        <span>100% Secure</span>
+                        <img src="images/icons/payments.svg" alt="" class="img-fluid">
+                        </div>
+    <div class="btns-area mb-4">
+    <a class="theme-btn btn-style-one w-100 mb-3" href="shop-checkout.html"><span class="btn-title">Proceed to Checkout</span> </a>
+    <a class="theme-btn btn-outline w-100" href="shop-products.html"><span class="btn-title">continue Shopping</span> </a>
+    </div>
+    <div class="col-sm-11 mx-auto">
+    <div class="d-flex mb-2">
+        <img src="images/icons/shipping.svg" alt="" class="img-fluid">
+        <span class="d-inline-block ps-2">Free Shipping Worldwide</span>
+    </div>
+    <div class="d-flex">
+        <img src="images/icons/delivery.svg" alt="" class="img-fluid">
+        <span class="d-inline-block ps-2">Delivers in: 3-7 Working Days</span>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+ <footer class="main-footer footer-style-two">
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget about-widget">
+                                <div class="logo"><a href="index.html"><img src="images/logo-2.png" alt></a></div>
+                                <div class="text">At Locked In Focusing Products, we’re not just selling supplements – we’re fueling transformation</div>
+                                
+                                
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-whatsapp-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>  
+                            </ul>
+                        </div>
+
+                        <div class="footer-column offset-xl-1 col-xl-2 col-sm-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Quick Links</h4>
+                                <ul class="user-links">
+                            
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-products.html">Products</a></li>
+                                    <li><a href="terms.html">Terms</a></li>
+                                    <li><a href="privacy-policy.html">Privacy</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                         
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Contact Info</h4>
+                               <ul class="user-links contact-links">
+                            
+                                    <li  class="d-flex"><i class="fa-regular fa-envelope"></i> 
+                                        <a href="mailto:info@lockedinproduct.com">info@lockedinproduct.com</a></li>
+                                    <li class="d-flex">
+                                        <i class="fa-regular fa-phone"></i>
+                                        <a href="tel:18005779667">(1800) 577 9667</a></li>
+
+                                    <li class="d-flex">
+                                        <i class="fa-regular fa-location"></i>
+                                        <a href="#">34 Carmine Street, New York, NY 10014</a></li>
+                         
+                                </ul>
+                            </div>
+                        </div>
+                        
+                         <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">Subcribe Newsletter</h4>
+                                <div class="subscribe-form">
+                                    <form method="post" action="#">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="email" value placeholder="Enter Your E-mail" required>
+                                            <button type="button" class="theme-btn"><span class="btn-title"><i class="fa-sharp fa-thin fa-paper-plane"></i></span></button>
+                                            <small class="text-muted">We do not spam. We send offers instead.</small>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="inner-container">
+                        <!-- <div class="row"> -->
+                        <div class="col-md-6 ">
+                        <div class="copyright-text text-md-start">
+                        Copyright &copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved
+                        </div>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                        <div class="d-inline-block">
+                        <span>Secure Payments With:</span>
+                        <img src="images/icons/payments.svg" alt="" class="img-fluid">
+                        </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</div>
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bxslider.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/splitType.js"></script>
+<script src="js/socialSharing.js"></script>
+<script src="js/ecom.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
