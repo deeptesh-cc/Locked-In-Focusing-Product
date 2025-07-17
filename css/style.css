@@ -336,7 +336,7 @@ section>.container-fluid {
 /*=== Default Form ===*/
 
 .form-control,
-.input-text {
+.input-text, .form-select {
     height: calc(1.95rem + 15px);
     padding: 11px 24px;
     outline: 0;
