@@ -355,3 +355,11 @@ footer .social-links li a{
 .product-details .pricing-area{
     font-family: var(--text-font);
 }
+@media (min-width: 1200px){
+    .checkout-fieds-area{
+        padding: 35px;
+        border-radius: 15px;
+        border: 1px solid #d9d9d9;
+        margin-top: 30px;
+    }
+}

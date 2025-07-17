@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Checkout | Locked In Focusing Product</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <div class="preloader"></div>
+
+        <header class="main-header header-style-one">
+            <div class="outer-box">
+
+                <div class="header-lower">
+
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
+                            <div class="logo-white"><a href="index.html"><img src="images/logo-2.png" alt="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation">
+                                    <li><a href="index.html">Home</a></li>
+
+                                            <li><a href="shop-products.html">Products</a></li>
+
+                                            <li><a href="terms.html">Terms</a></li>
+
+                                            <li><a href="privacy-policy.html">Privacy</a></li>
+
+                                            <li><a href="contact.html">Contact Us</a></li>
+
+                                    <!-- <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            <li><a href="page-services.html">Services List</a></li>
+                                            <li><a href="page-service-details.html">Service Details</a></li>
+                                        </ul>
+                                    </li> -->
+                                   
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="outer-box">
+
+                            <!-- <button class="ui-btn search-btn">
+                            <i class="icon fal fa-search"></i>
+                            </button> -->
+
+                            <a class="ui-btn" href="login.html">
+                                <i class="icon fal fa-user"></i>
+                            </a>
+
+                            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" class="ui-btn">
+                                <span id="cart-count" class="cart-count">0</span>
+                                <i class="icon fal fa-shopping-cart"></i>
+                            </button>
+
+                            <a class="ui-btn" href="wishlist-page.html">
+                                <span id="wish-count">0</span>
+                                <i class="icon fal fa-heart"></i>
+                            </a>
+                            <div class="divider"></div>
+
+                            <!-- <div class="btn-box">
+                                <a href="page-contact.html" class="theme-btn btn-style-one btn-style-transparent"><span class="btn-title">CONTACT US</span></a>
+                            </div> -->
+
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+                    <ul class="navigation clearfix">
+
+                    </ul>
+                    <ul class="contact-list-one">
+                        <li>
+                            <i class="icon lnr-icon-envelope1"></i>
+                            <span class="title">Send Email</span>
+                            <div class="text"><a href="/cdn-cgi/l/email-protection#acc0cddbdfc3c2ecc9d4cdc1dcc0c982cfc3c1"><span class="__cf_email__" data-cfemail="75141918145b191402061a1b35100d14180519105b161a18">alma.lawson@example.com</span></a></div>
+                        </li>
+                    </ul>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="icon fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-pinterest-p"></i></a></li>
+                        <li><a href="#"><i class="icon fab fa-vimeo-v"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="search-popup">
+                <span class="search-back-drop"></span>
+                <button class="close-search"><span class="fa fa-times"></span></button>
+                <div class="search-inner">
+                    <form method="post" action="index.html">
+                        <div class="form-group">
+                            <input type="search" name="search-field" value placeholder="Search..." required>
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                <h4 class="offcanvas-title">Your Cart!</h4>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body pt-0">
+                 <div id="cart-items" class="cart-scroll-area custom-scroll">
+
+                 </div>
+                 <div id="cart-total-area">
+                    <p class="my-3 p-2 border-top d-flex justify-content-between text-dark">Subtotal: <strong>$<strong id="cart-total">0</strong></strong></p>
+
+                    <div class="row row-cols-1 row-cols-sm-2 g-2">
+                        <div class="col">
+                            <a href="shop-cart.html" class="theme-btn btn-style-one w-100"><span class="btn-title">view cart</span></a>
+                            </div>
+                    <div class="col">
+                    <a href="shop-checkout.html" class="theme-btn btn-style-one w-100"><span class="btn-title">checkout</span></a>
+                    </div>
+                    </div>
+                </div>
+              </div> 
+            </div>  
+
+
+
+        </header>
+
+
+        <section class="page-title" style="background-image: url(images/about/page-title-bg.png);">
+<div class="image-curve"></div>
+<div class="auto-container">
+<div class="title-outer text-center">
+<h1 class="title">Checkout</h1>
+<ul class="page-breadcrumb">
+<li><a href="index.html">Home</a></li>
+<li>Checkout</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="section-gap-tb">
+<div class="container">
+<form class="checkout-form" id="checkout-form" action="#">
+<div class="row justify-content-around">
+<div class="col-lg-7">
+<form id="checkout-form" action="">
+<div class="billing-details checkout-fieds-area">
+<h4 class="mb-30">Billing Details</h4>
+<div class="row">
+<div class="mb-3 col-md-6">
+<label for="checkuot-form-fname">First Name</label>
+<input id="checkuot-form-fname" type="email" class="form-control" placeholder="First Name">
+</div>
+<div class="mb-3 col-md-6">
+<label for="checkuot-form-lname">Last Name</label>
+<input id="checkuot-form-lname" type="email" class="form-control" placeholder="Last Name">
+</div>
+<div class="col-md-12">
+<div class="mb-3">
+<label for="checkuot-form-cname">Company Name</label>
+<input id="checkuot-form-cname" type="email" class="form-control" placeholder="Company Name">
+</div>
+<div class="mb-3">
+<label for="checkuot-form-email">Email Address</label>
+<input id="checkuot-form-email" type="email" class="form-control" placeholder="Email Address">
+</div>
+<div class="mb-3">
+<label for="checkuot-form-address">Address</label>
+<input id="checkuot-form-address" type="email" class="form-control" placeholder="Street address">
+</div>
+<div class="mb-3">
+<input type="email" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
+</div>
+</div>
+<div class="mb-3 col-md-6">
+<label for="checkuot-form-city">City</label>
+<input id="checkuot-form-city" type="email" class="form-control" placeholder="City">
+</div>
+<div class="mb-3 col-md-6">
+<label>State/Province</label>
+<select class="form-control">
+<option>Select Country</option>
+<option>Australia</option>
+<option>UK</option>
+<option>USA</option>
+</select>
+</div>
+<div class="mb-3 col-md-6">
+<label for="checkuot-form-zip">Zip/Postal Code</label>
+<input id="checkuot-form-zip" type="email" class="form-control" placeholder="Zip/Postal Code">
+</div>
+<div class="mb-3 col-md-6">
+<label>Country</label>
+<select class="form-control">
+<option>Select Country</option>
+<option>Australia</option>
+<option>UK</option>
+<option>USA</option>
+</select>
+</div>
+</div>
+</div>
+<div class="payment-method checkout-fieds-area">
+        <h4>Choose a Payment Method</h4>
+        <ul class="accordion-box">
+        <li class="accordion block active-block">
+        <div class="acc-btn active">
+        <div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
+        Credir Card / Debit Card
+        </div>
+        <div class="acc-content current">
+        <div class="payment-info">
+        <div class="row clearfix">
+        <div class="col-lg-6 col-md-6 col-sm-12 column">
+        <div class="field-input mb-3">
+        <input type="text" class="form-control" name="name" placeholder="Name on the Card" required>
+        </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 column">
+        <div class="field-input mb-3">
+        <input type="text" class="form-control" name="number" placeholder="Card Number" required>
+        </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 column">
+        <div class="field-input mb-3">
+        <input type="text" class="form-control" name="date" placeholder="Expiry Date" required>
+        </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 column">
+        <div class="field-input mb-3">
+        <input type="text" class="form-control" name="code" placeholder="Security Code" required>
+        </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 column">
+        <div class="field-input message-btn">
+        <a type="submit" class="theme-btn btn-style-one" href="thank-you.html" data-loading-text="Please wait..."><span class="btn-title">Make Payment</span></a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </li>
+        <li class="accordion block">
+        <div class="acc-btn">
+        <div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
+        Direct Bank Transfer
+        </div>
+        <div class="acc-content">
+        <div class="payment-info">
+        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+        </div>
+        </div>
+        </li>
+        <li class="accordion block">
+        <div class="acc-btn">
+        <div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
+        Cheque Payment
+        </div>
+        <div class="acc-content">
+        <div class="payment-info">
+        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+        </div>
+        </div>
+        </li>
+        <li class="accordion block">
+        <div class="acc-btn">
+        <div class="icon-outer"><i class="lnr-icon-chevron-down"></i></div>
+        Other Payment
+        </div>
+        <div class="acc-content">
+        <div class="payment-info">
+        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+        </div>
+        </div>
+        </li>
+        </ul>
+</div>      
+</div>
+</form>
+
+<div class="col-lg-5 col-xl-4">
+    <h4>Your order</h4>
+<table class="table table-striped table-bordered tbl-shopping-cart">
+<thead id="shopping-cart-head">
+
+<tr>
+<th>Photo</th>
+<th>Product Name</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody id="checkout-items">
+
+
+</tbody>
+<tbody id="check-cart-foot">
+    <tr>
+        <td>Cart Subtotal</td>
+        <td>&nbsp;</td>
+        <td>$<span id="cart-sub-total">0</span></td>
+        </tr>
+        <tr>
+        <td>Shipping and Handling</td>
+        <td>&nbsp;</td>
+        <td>$<span id="shipping-rate">0</span>.00</td>
+        </tr>
+        <tr>
+        <td>Order Total</td>
+        <td>&nbsp;</td>
+        <td>$<span id="cart-total2">0</span></td>
+        </tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</form>
+</div>
+</section>
+
+
+ <footer class="main-footer footer-style-two">
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget about-widget">
+                                <div class="logo"><a href="index.html"><img src="images/logo-2.png" alt></a></div>
+                                <div class="text">At Locked In Focusing Products, we’re not just selling supplements – we’re fueling transformation</div>
+                                
+                                
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-instagram-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-whatsapp-square"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>  
+                            </ul>
+                        </div>
+
+                        <div class="footer-column offset-xl-1 col-xl-2 col-sm-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Quick Links</h4>
+                                <ul class="user-links">
+                            
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-products.html">Products</a></li>
+                                    <li><a href="terms.html">Terms</a></li>
+                                    <li><a href="privacy-policy.html">Privacy</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                         
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Contact Info</h4>
+                               <ul class="user-links contact-links">
+                            
+                                    <li  class="d-flex"><i class="fa-regular fa-envelope"></i> 
+                                        <a href="mailto:info@lockedinproduct.com">info@lockedinproduct.com</a></li>
+                                    <li class="d-flex">
+                                        <i class="fa-regular fa-phone"></i>
+                                        <a href="tel:18005779667">(1800) 577 9667</a></li>
+
+                                    <li class="d-flex">
+                                        <i class="fa-regular fa-location"></i>
+                                        <a href="#">34 Carmine Street, New York, NY 10014</a></li>
+                         
+                                </ul>
+                            </div>
+                        </div>
+                        
+                         <div class="footer-column col-xl-3 col-sm-6">
+                            <div class="footer-widget">
+                                <h4 class="widget-title">Subcribe Newsletter</h4>
+                                <div class="subscribe-form">
+                                    <form method="post" action="#">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="email" value placeholder="Enter Your E-mail" required>
+                                            <button type="button" class="theme-btn"><span class="btn-title"><i class="fa-sharp fa-thin fa-paper-plane"></i></span></button>
+                                            <small class="text-muted">We do not spam. We send offers instead.</small>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="inner-container">
+                        <!-- <div class="row"> -->
+                        <div class="col-md-6 ">
+                        <div class="copyright-text text-md-start">
+                        Copyright &copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved
+                        </div>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                        <div class="d-inline-block">
+                        <span>Secure Payments With:</span>
+                        <img src="images/icons/payments.svg" alt="" class="img-fluid">
+                        </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</div>
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+   
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/bxslider.js"></script>
+    <script src="js/splitType.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/ecom.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

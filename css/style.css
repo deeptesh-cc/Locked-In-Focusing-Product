@@ -337,13 +337,17 @@ section>.container-fluid {
 
 .form-control,
 .input-text {
-    height: calc(2.25rem + 27px);
-    padding: 14px 30px;
+    height: calc(1.95rem + 15px);
+    padding: 11px 24px;
     outline: 0;
-    background-color: #f4f5f8;
+    background-color: #F4F7FF;
     border: 1px solid #f4f5f8;
     color: var(--theme-color2);
     width: 100%;
+}
+label{
+    font-size: 16px;
+    font-weight: 500;
 }
 label.error{
     color: var(--theme-color1);
