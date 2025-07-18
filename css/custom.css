@@ -360,9 +360,28 @@ footer .social-links li a{
         padding: 35px 35px 20px;
         border-radius: 15px;
         border: 1px solid #d9d9d9;
-        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 #checkout-form h4{
     font-weight: 500;
+}
+.checkout-summary{
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 15px;
+}
+#checkout-items .product-thumbnail{
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    margin-right: 15px;
+    padding: 7px 0;
+    text-align: center;
+}
+#checkout-items .product-thumbnail img{
+    height: 100%;
+    object-fit: contain;
 }

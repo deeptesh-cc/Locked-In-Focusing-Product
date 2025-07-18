@@ -169,7 +169,7 @@
 </section>
 
 
-<section class="section-gap-tb">
+<section class="sec-pad">
 <div class="container">
 <form class="checkout-form" id="checkout-form" action="#">
 <div class="row justify-content-around">
@@ -261,38 +261,56 @@
 
 
 <div class="col-lg-5 col-xl-4">
-    <h4>Your order</h4>
-<table class="table table-striped table-bordered tbl-shopping-cart">
-<thead id="shopping-cart-head">
+    <div class="checkout-summary">
+        <h4>Your order</h4>
+        <!-- <thead id="shopping-cart-head">
+            <tr>
+            <th>Photo</th>
+            <th>Product Name</th>
+            <th>Total</th>
+            </tr>
+        </thead> -->
+        <div id="checkout-items">
 
-<tr>
-<th>Photo</th>
-<th>Product Name</th>
-<th>Total</th>
-</tr>
-</thead>
-<tbody id="checkout-items">
-
-
-</tbody>
-<tbody id="check-cart-foot">
+        </div>
+        <div id="check-cart-foot">
+            <ul>
+                <li class="d-flex justify-content-between">
+                    Cart Subtotal
+                    <strong>$<span id="cart-sub-total">0</span></strong>
+                </li>
+                <li class="d-flex justify-content-between">
+                    Shipping and Handling
+                    <strong>$<span id="shipping-rate">0</span></strong>
+                </li>
+                <li class="d-flex justify-content-between">
+                    <strong>Order Total</strong>
+                    <strong>$<span id="cart-total2">0</span></strong>
+                </li>
+            </ul>
+        </div>
+        <button type="submit" class="theme-btn btn-style-one w-100" value="submit">complete checkout</button>
+    </div>
+    
+<!-- <table class="table table-striped table-bordered tbl-shopping-cart">
+<tbody >
     <tr>
-        <td>Cart Subtotal</td>
+        <td></td>
         <td>&nbsp;</td>
-        <td>$<span id="cart-sub-total">0</span></td>
+        <td></td>
         </tr>
         <tr>
-        <td>Shipping and Handling</td>
+        <td></td>
         <td>&nbsp;</td>
-        <td>$<span id="shipping-rate">0</span>.00</td>
+        <td></td>
         </tr>
         <tr>
-        <td>Order Total</td>
+        <td></td>
         <td>&nbsp;</td>
-        <td>$<span id="cart-total2">0</span></td>
+        <td>$<span >0</span></td>
         </tr>
 </tbody>
-</table>
+</table> -->
 </div>
 
 </div>

@@ -154,12 +154,12 @@ function loadCart() {
 
       if(checkoutContainer){
         tableHtml2 += `
-        <tr>
-            <td class="product-thumbnail"><a href="#"><img alt="product" src="${item.image}"></a></td>
-            <td class="product-name">${item.name} <br/> <small class="py-1 px-2 border rounded-3"><strong>Quantity: ${item.quantity}</strong></small></td>
-            <td><span class="amount">$${item.price.toFixed(2)}</span></td>
+        <div class="d-flex align-items-center mb-2">
+            <div class="product-thumbnail"><img alt="product" src="${item.image}"></div>
+            <div class="product-name">${item.name} <br/> <small class="py-1 px-2 border rounded-3"><strong>Quantity: ${item.quantity}</strong></small></div>
+            <div><span class="amount">$${item.price.toFixed(2)}</span></div>
             
-        </tr>
+        </div>
           `
       }
 
