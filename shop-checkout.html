@@ -179,49 +179,52 @@
 <h4 class="mb-30">Billing Details</h4>
 <div class="row">
 <div class="mb-3 col-md-6">
-<label for="">First Name</label>
-<input id="" type="text" class="form-control" name="firstName" placeholder="First Name">
+<label class="required" for="">First Name</label>
+<input id="" type="text" class="form-control" name="firstName" placeholder="First Name" required>
 </div>
 <div class="mb-3 col-md-6">
-<label for="">Last Name</label>
+<label class="required" for="">Last Name</label>
 <input id="" type="text" class="form-control" name="lastName" placeholder="Last Name">
 </div>
 <div class="mb-3 col-md-6">
-<label for="">Email Address</label>
+<label class="required" for="">Email Address</label>
 <input id="" type="email" class="form-control" name="email" placeholder="Email Address">
 </div>
 <div class="mb-3 col-md-6">
-<label for="">Phone Number</label>
+<label class="required" for="">Phone Number</label>
 <input id="" type="tel" class="form-control" name="phone" placeholder="Phone Number">
 </div>
 <div class="mb-3 col-md-12">
-<label for="">Full Address</label>
+<label class="required" for="">Full Address</label>
 <input id="" type="text" class="form-control" name="address" placeholder="Full Address">
 </div>
 <div class="mb-3 col-md-6">
-<label for="">Country</label>
+<label class="required" for="">Country</label>
 <input id="" type="text" class="form-control" name="country" placeholder="Country">
 </div>
 <div class="mb-3 col-md-6">
-<label for="">State</label>
+<label class="required" for="">State</label>
 <input id="" type="text" class="form-control" name="state" placeholder="State">
 </div>
 <div class="mb-3 col-md-6">
-<label for="">City</label>
+<label class="required" for="">City</label>
 <input id="" type="text" class="form-control" name="city" placeholder="City">
 </div>
 <div class="mb-3 col-md-6">
-<label for="">Zipcode</label>
+<label class="required" for="">Zipcode</label>
 <input id="" type="number" class="form-control" name="zipcode" placeholder="Zipcode">
 </div>
-
+<div class="mb-3 col-md-12">
+<label for="">Any instructions for delivery</label>
+<input id="" type="text" class="form-control" name="" placeholder="Any instructions for delivery...">
+</div>
 </div>
 </div>
 <div class="payment-method checkout-fieds-area">
         <h4>Choose a Payment Method</h4>
         <div class="row">
             <div class="mb-3 col-md-12">
-            <label>Select Payment Method</label>
+            <label class="required">Select Payment Method</label>
             <select name="paymentMethod" class="form-select">
             <option selected>Select Payment Method</option>
             <option>Visa</option>
@@ -230,11 +233,11 @@
             </select>
             </div>
             <div class="mb-3 col-md-12">
-            <label for="">Card Number</label>
+            <label class="required" for="">Card Number</label>
             <input id="" type="number" class="form-control" name="cardNumber" placeholder="Card Number">
             </div>
              <div class="mb-3 col-md-4">
-                <label>Expiry Month</label>
+                <label class="required">Expiry Month</label>
                 <select name="expiryMonth" class="form-select">
                 <option selected>Expiry Month</option>
                 <option>Jan</option>
@@ -243,7 +246,7 @@
                 </select>
             </div>
             <div class="mb-3 col-md-4">
-                <label>Expiry Year</label>
+                <label class="required">Expiry Year</label>
                 <select name="expiryYear" class="form-select">
                 <option selected>Expiry Year</option>
                 <option>2027</option>
@@ -252,7 +255,7 @@
                 </select>
             </div>
             <div class="mb-3 col-md-4">
-            <label for="">CVV</label>
+            <label class="required" for="">CVV</label>
             <input id="" type="number" class="form-control" name="cvv" placeholder="CVV">
             </div>
         </div>
@@ -262,7 +265,7 @@
 
 <div class="col-lg-5 col-xl-4">
     <div class="checkout-summary">
-        <h4>Your order</h4>
+        <h4 class="mb-30">Your Order</h4>
         <!-- <thead id="shopping-cart-head">
             <tr>
             <th>Photo</th>
@@ -275,20 +278,28 @@
         </div>
         <div id="check-cart-foot">
             <ul>
-                <li class="d-flex justify-content-between">
-                    Cart Subtotal
-                    <strong>$<span id="cart-sub-total">0</span></strong>
-                </li>
-                <li class="d-flex justify-content-between">
-                    Shipping and Handling
-                    <strong>$<span id="shipping-rate">0</span></strong>
-                </li>
+                <ul>
+                    <li class="d-flex justify-content-between mb-2">
+                        Cart Subtotal
+                        <strong>$<span id="cart-sub-total">0</span></strong>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                        Shipping and Handling
+                        <strong><span>FREE</span></strong>
+                    </li>
+                </ul>
                 <li class="d-flex justify-content-between">
                     <strong>Order Total</strong>
-                    <strong>$<span id="cart-total2">0</span></strong>
+                    <strong>$<span id="cart-total2">0</span>.00</strong>
                 </li>
             </ul>
         </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" name="termsCheckbox" id="termsCheckbox">
+            <label class="form-check-label" for="termsCheckbox">
+                I have agree to the website <a href="terms.html" class="text-decoration-underline" target="_blank">terms and conditions</a>.
+            </label>
+            </div>
         <button type="submit" class="theme-btn btn-style-one w-100" value="submit">complete checkout</button>
     </div>
     

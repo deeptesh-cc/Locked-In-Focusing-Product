@@ -47,7 +47,7 @@
     --title-font: "Oswald", sans-serif;
     --body-font-size: 18px;
     --body-line-height: 32px;
-    --body-font-weight: 400;
+    --body-font-weight: 500;
     --line-height-heading-h1: 1.2em;
     --line-height-heading: 1.211em;
     --line-height-heading-small: 1.4em;
@@ -347,10 +347,14 @@ section>.container-fluid {
 }
 label{
     font-size: 16px;
-    font-weight: 500;
+    line-height: 1.5;
 }
 label.error{
     color: var(--theme-color1);
+}
+label.required::after{
+    content: "*";
+    color:red;
 }
 .form-control::-webkit-input-placeholder,
 .input-text::-webkit-input-placeholder {
