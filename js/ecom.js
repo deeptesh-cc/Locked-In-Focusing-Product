@@ -401,7 +401,7 @@ function loadCart() {
                                     </div>
                                 </div>
                                     <div class="action-btns-area">
-                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
+                                            <a href="product-details.html?id=${item.id}" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
                                             <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
                                             
                                         </div>

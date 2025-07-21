@@ -679,9 +679,9 @@ var THEMEMASCOT = {};
     $('.custom-select').select2({
         minimumResultsForSearch: 7,
     });
-    if ($('.filter-list').length) {
-        $('.filter-list').mixItUp({});
-    }
+    // if ($('.filter-list').length) {
+    //     $('.filter-list').mixItUp({});
+    // }
     if ($('[data-tm-bg-color]').length) {
         $('[data-tm-bg-color]').each(function() {
             $(this).css("cssText", "background-color: " + $(this).data("tm-bg-color") + " !important;");

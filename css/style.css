@@ -47,7 +47,7 @@
     --title-font: "Oswald", sans-serif;
     --body-font-size: 18px;
     --body-line-height: 32px;
-    --body-font-weight: 500;
+    --body-font-weight: 400;
     --line-height-heading-h1: 1.2em;
     --line-height-heading: 1.211em;
     --line-height-heading-small: 1.4em;
@@ -72,7 +72,7 @@
     --sec-title-font-size: var(--h2-font-size);
     --sec-title-font-family: var(--title-font);
     --sec-title-font-weight: 600;
-    --sec-title-title-line-height: 1.172em;
+    --sec-title-title-line-height: 1.072em;
     --theme-light-background: #f8f6f1;
     --theme-light-background-text-color: var(--headings-color);
     --theme-black: #000000;
@@ -340,13 +340,14 @@ section>.container-fluid {
     height: calc(1.95rem + 15px);
     padding: 11px 24px;
     outline: 0;
-    background-color: #F4F7FF;
-    border: 1px solid #f4f5f8;
+    /* background-color: #F4F7FF; */
+    border: 1px solid #d9d9d9;
     color: var(--theme-color2);
     width: 100%;
 }
 label{
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
 }
 label.error{
@@ -3272,7 +3273,7 @@ Main Header
 .main-menu .navigation>li {
     position: relative;
     float: left;
-    padding: 42.5px 0;
+    padding: 35.5px 0;
     margin-right: 60px;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -3322,6 +3323,7 @@ Main Header
     line-height: 22.68px;
     text-transform: uppercase;
     font-weight: 500;
+        /* letter-spacing: 0.5px; */ 
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3933,7 +3935,7 @@ Main Header
     }
 }
 
-.main-header .header-lower .logo-box {
+.main-header .header-lower .logo-box, .login-area .logo-area {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19308,11 +19310,10 @@ Page Title
 }
 
 .error-page__inner .error-page__sub-title {
-    font-size: 40px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 52px;
+    font-weight: 500;
+    text-transform: capitalize;
     line-height: 50px;
-    margin-top: -16px;
 }
 @media (max-width: 767.98px){
     .section-gap-tb {

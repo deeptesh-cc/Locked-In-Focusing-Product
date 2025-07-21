@@ -5,7 +5,7 @@
     position: relative;
     font-size: 18px;
     line-height: 17px;
-    padding: 14px 25px !important;
+    padding: 15px 25px !important;
     font-family: var(--title-font);
     font-weight: 500;
     overflow: hidden;
@@ -25,6 +25,15 @@
 .main-header.fixed-header .logo{
     display: block;
     position: relative;
+}
+.header-white .main-menu .navigation>li>a{
+    color: var(--theme-color2);
+}
+.main-header.header-white .logo{
+    display: block !important;
+}
+.main-header.header-white .logo-white{
+     display: none!important;
 }
 .heroBanArea{
     padding-top: 135px;
@@ -389,14 +398,62 @@ footer .social-links li a{
 #checkout-items .product-name, #checkout-items .product-name span {
     font-size: 16px;
     line-height: 1.7;
+    font-weight: 500;
 }
 #check-cart-foot ul>ul{
     padding: 15px 0;
     margin-top: 30px;
+    font-weight: 500;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
 }
 #check-cart-foot>ul>li{
     margin: 17px 0;
     font-size: 23px;
+}
+.thk-area{
+    padding: 180px 0 80px;
+}
+.order-bill-area{
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 500px;
+    margin: 15px auto 25px;
+}
+.order-bill-area ul li{
+    font-weight: 500;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 10px 0;
+    font-size: 16px;
+}
+.order-bill-area ul li:last-child{
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 0;
+}
+.contact-details__right .map-area{
+    border-radius: 10px;
+    height: 400px;
+}
+.contact-details__right .widget-title{
+    font-size: 28px;
+    font-weight: 500;
+}
+.contact-details__right .links-widget .user-links li a{
+    color: var(--theme-color2);
+}
+.loginAreaLeft{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.loginAreaLeft .from-area{
+    margin-top: 70px;
+}
+.terms-content-area h4{
+    font-size: 24px;
+    font-family: var(--text-font);
 }
