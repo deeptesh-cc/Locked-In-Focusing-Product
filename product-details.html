@@ -220,16 +220,17 @@
 </div>
 <div class="product-details__quantity gap-3">
 <div class="quantity-box">
-<button type="button" class="sub quantity-decrease" data-id="">-</button>
-<input type="number" min="1" value="1" data-id="" id="prod-qty-chng"/>
-<button type="button" class="add quantity-increase" data-id="">+</button>
+<button type="button" class="sub quantity-decrease">-</button>
+<input type="number" min="1" value="1" id="prod-qty-chng"/>
+<button type="button" class="add quantity-increase">+</button>
 </div>
 <div class="product-details__buttons-1">
-<div class="theme-btn btn-style-one "><button class="add-to-cart"></button><span class="btn-title ps-2">Add to Cart</span>
+<div class="theme-btn btn-style-one "><button class="add-to-cart prodDtl-cart-btn"></button>
+   <span class="btn-title ps-2">Add To Cart</span>
 </div>
 </div>
 <div class="product-details__buttons-2">
-   <button class="add-to-wishlist"></button>
+   <button class="add-to-wishlist prodDtl-wish-btn"></button>
 </div>
 </div>
 <div class="mt-5 mb-4">
@@ -374,20 +375,16 @@
 
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
 
-<script src="js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/bxslider.js"></script>
-    <script src="js/splitType.js"></script>
     <script src="js/wow.js"></script>
-    <script src="js/select2.min.js"></script>
     <script src="js/appear.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/owl.js"></script>
+    <script src="js/allProducts.js"></script>
     <script src="js/ecom.js"></script>
     <script src="js/script.js"></script>
 
@@ -421,6 +418,8 @@
         document.querySelector('.quantity-box .quantity-decrease').dataset.id = product.id
         document.querySelector('.quantity-box .quantity-increase').dataset.id = product.id
         document.getElementById('prod-qty-chng').dataset.id = product.id
+        document.querySelector('.prodDtl-wish-btn').dataset.id = product.id
+        document.querySelector('.prodDtl-cart-btn').dataset.id = product.id
     }
 
     if (product) {
@@ -450,5 +449,50 @@
       document.getElementById('product-details').innerHTML = "<p>Product not found.</p>";
     }
   </script>
+
+  <script>
+    
+    // console.log(wishlist);
+    // console.log(wishBtn.dataset.id);
+    function productDetailsDataCheck() {
+        
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    let wishBtn = document.querySelector('.prodDtl-wish-btn');
+    let cartBtn = document.querySelector('.prodDtl-cart-btn');
+    let qtyInput = document.getElementById('prod-qty-chng');
+
+    console.log(qtyInput);
+    
+    //console.log(wishlist);
+
+        wishlist.forEach((item) => {
+            if (item.id == wishBtn.dataset.id) {
+                wishBtn.innerHTML = `<i class="fas fa-heart"></i>`;
+                //debugger
+               
+            //console.log("Deep");
+            }
+        })
+        // if(cartBtn){
+        //     cartBtn.innerHTML = `<i class="fa-sharp fa-light fa-cart-shopping"></i> Add to Cart`;
+        // }
+        cartData.forEach((item) => {
+            if (item.id == cartBtn.dataset.id) {
+                cartBtn.innerHTML = `<i class="fas fa-shopping-cart"></i>`;
+            }
+            if (item.id == qtyInput.dataset.id) {
+                //console.log(item);
+                
+                qtyInput.value = item.quantity;
+            }
+        })
+    }
+    
+    productDetailsDataCheck();
+
+  </script>
+
+  
 </body>
 </html>

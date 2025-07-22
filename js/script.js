@@ -676,9 +676,9 @@ var THEMEMASCOT = {};
             }
         });
     }
-    $('.custom-select').select2({
-        minimumResultsForSearch: 7,
-    });
+    // $('.custom-select').select2({
+    //     minimumResultsForSearch: 7,
+    // });
     // if ($('.filter-list').length) {
     //     $('.filter-list').mixItUp({});
     // }

@@ -332,7 +332,9 @@ section>.container-fluid {
         max-width: var(--container-width);
     }
 }
-
+.object-cover{
+    object-fit: cover !important;
+}
 /*=== Default Form ===*/
 
 .form-control,
