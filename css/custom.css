@@ -472,9 +472,16 @@ footer .social-links li a{
     align-items: end;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-  background-color: #0d6efd;
+.range-slider .values-wrap{
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+    padding: 5px 15px;
+    max-width: 156px;
+    margin-top: 25px;
 }
-input[type="range"]::-moz-range-thumb {
-  background-color: #0d6efd;
+.move-to-cart::before{
+    content: "Move To Cart";
+}
+.move-to-cart .fa-cart-shopping{
+    display: none;
 }

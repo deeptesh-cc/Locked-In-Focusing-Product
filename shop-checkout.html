@@ -180,39 +180,48 @@
 <div class="row">
 <div class="mb-3 col-md-6">
 <label class="required" for="">First Name</label>
-<input id="" type="text" class="form-control" name="firstName" placeholder="First Name" required>
+<input id="" type="text" class="form-control" name="firstName" placeholder="First Name">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">Last Name</label>
 <input id="" type="text" class="form-control" name="lastName" placeholder="Last Name">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">Email Address</label>
 <input id="" type="email" class="form-control" name="email" placeholder="Email Address">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">Phone Number</label>
 <input id="" type="tel" class="form-control" name="phone" placeholder="Phone Number">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-12">
 <label class="required" for="">Full Address</label>
 <input id="" type="text" class="form-control" name="address" placeholder="Full Address">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">Country</label>
 <input id="" type="text" class="form-control" name="country" placeholder="Country">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">State</label>
 <input id="" type="text" class="form-control" name="state" placeholder="State">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">City</label>
 <input id="" type="text" class="form-control" name="city" placeholder="City">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-6">
 <label class="required" for="">Zipcode</label>
 <input id="" type="number" class="form-control" name="zipcode" placeholder="Zipcode">
+<span class="error-message"></span>
 </div>
 <div class="mb-3 col-md-12">
 <label for="">Any instructions for delivery</label>
@@ -225,38 +234,64 @@
         <div class="row">
             <div class="mb-3 col-md-12">
             <label class="required">Select Payment Method</label>
-            <select name="paymentMethod" class="form-select">
-            <option selected>Select Payment Method</option>
-            <option>Visa</option>
-            <option>Mastercard</option>
-            <option>Discover</option>
+            <select name="paymentMethod" class="form-select" id="paymentMethod">
+            <option value="">Select Payment Method</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="discover">Discover</option>
             </select>
+            <span class="error-message"></span>
             </div>
             <div class="mb-3 col-md-12">
             <label class="required" for="">Card Number</label>
-            <input id="" type="number" class="form-control" name="cardNumber" placeholder="Card Number">
+            <input id="" type="number" class="form-control" name="cardNumber" maxlength="12" placeholder="Card Number">
+            <span class="error-message"></span>
             </div>
              <div class="mb-3 col-md-4">
                 <label class="required">Expiry Month</label>
-                <select name="expiryMonth" class="form-select">
-                <option selected>Expiry Month</option>
-                <option>Jan</option>
-                <option>Feb</option>
-                <option>March</option>
+                <select name="expiryMonth" class="form-select" id="expiryMonth">
+                    <option value="">Expiry Month</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
                 </select>
+                <span class="error-message"></span>
             </div>
             <div class="mb-3 col-md-4">
                 <label class="required">Expiry Year</label>
-                <select name="expiryYear" class="form-select">
-                <option selected>Expiry Year</option>
-                <option>2027</option>
-                <option>2028</option>
-                <option>2029</option>
+                <select name="expiryYear" class="form-select" id="expiryYear">
+                    <option value="">Expiry Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    <option value="2035">2035</option>
+                    <option value="2036">2036</option>
+                    <option value="2037">2037</option>
+                    <option value="2038">2038</option>
+                    <option value="2039">2039</option>
                 </select>
+                <span class="error-message"></span>
             </div>
             <div class="mb-3 col-md-4">
             <label class="required" for="">CVV</label>
             <input id="" type="number" class="form-control" name="cvv" placeholder="CVV">
+            <span class="error-message"></span>
             </div>
         </div>
 </div>      
@@ -299,31 +334,13 @@
             <label class="form-check-label" for="termsCheckbox">
                 I have agree to the website <a href="terms.html" class="text-decoration-underline" target="_blank">terms and conditions</a>.
             </label>
+            <span class="error-message"></span>
             </div>
         <button type="submit" class="theme-btn btn-style-one w-100" value="submit">complete checkout</button>
         </div>
         
     </div>
-    
-<!-- <table class="table table-striped table-bordered tbl-shopping-cart">
-<tbody >
-    <tr>
-        <td></td>
-        <td>&nbsp;</td>
-        <td></td>
-        </tr>
-        <tr>
-        <td></td>
-        <td>&nbsp;</td>
-        <td></td>
-        </tr>
-        <tr>
-        <td></td>
-        <td>&nbsp;</td>
-        <td>$<span >0</span></td>
-        </tr>
-</tbody>
-</table> -->
+
 </div>
 
 </div>
@@ -443,6 +460,7 @@
     <script src="js/owl.js"></script>
     <script src="js/allProducts.js"></script>
     <script src="js/ecom.js"></script>
+    <script src="js/formValidation.js"></script>
     <script src="js/script.js"></script>
 
 </body>

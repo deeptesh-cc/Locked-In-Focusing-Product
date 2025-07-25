@@ -265,8 +265,7 @@ function loadCart() {
 
   const allProducts = document.querySelectorAll('#product-list3 .product-block');
 //debugger;
-  const productContainer = document.getElementById('product-list3')
-  let found = false;
+  const message = document.querySelector('#product-list3 .notFound')
   allProducts.forEach(product => {
     const productName = product.dataset.name.toLowerCase();
     const productCategories = product.dataset.category.split(" ");
@@ -282,20 +281,21 @@ function loadCart() {
 
     const matchesPrice = price >= minPrice && price <= maxPrice;
 
-    
-    if(matchesSearch) found = true;
+    if(!matchesSearch || !matchesPrice){
+       message.textContent = "Sorry! Product Not Found"
+    }else{
+      message.textContent = ""
+    }
 
-    // Final condition: must match BOTH
+    // Final condition: must match ALL
     if (matchesPrice && matchesSearch && matchesCategory) {
       product.style.display = 'block';
     } else {
       product.style.display = 'none';
     }
+
   });
 
-  if(!found)
-    productContainer.innerHTML = `<p class="text-center">Sorry! Product Not Found</p>`;
-  
 }
 
 // Search input listener
@@ -427,24 +427,24 @@ document.querySelectorAll('.prod-filt-input').forEach(input => {
       // Add item to cart
       cart.push({ id, name, price, image, quantity: currentValue });
 
-      // const wishCount = document.getElementById('wish-count');
+      const wishCount = document.getElementById('wish-count');
 
-      // let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-      // let shortListedItems = wishlist.find((item) => item.id==id);
+      let shortListedItems = wishlist.find((item) => item.id==id);
 
-      // let index = wishlist.indexOf(shortListedItems);
+      let index = wishlist.indexOf(shortListedItems);
       
-      // wishlist.splice(index, 1);
-      // localStorage.setItem("wishlist",JSON.stringify(wishlist));
+      wishlist.splice(index, 1);
+      localStorage.setItem("wishlist",JSON.stringify(wishlist));
 
       alert('Product Added in Cart')
 
-      // displayWishlist();
+      displayWishlist();
 
-      // if (wishCount) {
-      //   wishCount.textContent = wishlist.length;
-      // }
+      if (wishCount) {
+        wishCount.textContent = wishlist.length;
+      }
 
     } else {
       // Item already in cart; optionally, handle quantity update here
@@ -667,6 +667,8 @@ function displayWishlist() {
   const wishlistContainer = document.getElementById('wishlist-container');
   const wishCount = document.getElementById('wish-count');
 
+  // document.querySelectorAll('.move-to-cart').innerHTML = "Move To Cart"
+
   if(wishlistContainer){
     wishlistContainer.innerHTML = ''; // Clear previous items
 
@@ -713,7 +715,7 @@ function displayWishlist() {
                                 </div>
 
                                 <div class="action-btns-area">
-                                            <button class="theme-btn btn-outline w-100 move-to-cart" data-id="${product.id}"><span class="btn-title">Move To Cart</span></button>
+                                            <button class="theme-btn btn-outline w-100 add-to-cart move-to-cart" data-id="${product.id}"></button>
                                             
                                             
                                         </div>
@@ -761,51 +763,51 @@ function removeFromWishlist(productId) {
 // to show the wishlist on page load or whenever needed
 displayWishlist();
 
-function moveToCartFromWishlist(event) {  
-  const productElement = event.target.closest(".product-item");
-  const id = productElement.dataset.id;
-  const name = productElement.dataset.name;
-  const price = parseFloat(productElement.dataset.price);
-  const image = productElement.dataset.image;
-  const quantity = productElement.dataset.quantity;
-  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-  const wishCount = document.getElementById('wish-count');
+// function moveToCartFromWishlist(event) {  
+//   const productElement = event.target.closest(".product-item");
+//   const id = productElement.dataset.id;
+//   const name = productElement.dataset.name;
+//   const price = parseFloat(productElement.dataset.price);
+//   const image = productElement.dataset.image;
+//   const quantity = productElement.dataset.quantity;
+//   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+//   const wishCount = document.getElementById('wish-count');
 
-  console.log("clicked");
+//   console.log("clicked");
 
-  let currentValue = quantity ? Number(quantity) : Number(document.getElementById("prod-qty-chng")?.value || 1);
+//   let currentValue = quantity ? Number(quantity) : Number(document.getElementById("prod-qty-chng")?.value || 1);
 
-  // Check if already in cart
-  const existingCartIndex = cart.findIndex(item => item.id === id);
+//   // Check if already in cart
+//   const existingCartIndex = cart.findIndex(item => item.id === id);
 
-  if (existingCartIndex === -1) {
-    cart.push({ id, name, price, image, quantity: currentValue });
-  } else {
-    cart[existingCartIndex].quantity += currentValue;
-  }
+//   if (existingCartIndex === -1) {
+//     cart.push({ id, name, price, image, quantity: currentValue });
+//   } else {
+//     cart[existingCartIndex].quantity += currentValue;
+//   }
 
-  // Remove from wishlist
-  wishlist = wishlist.filter(item => item.id !== id);
+//   // Remove from wishlist
+//   wishlist = wishlist.filter(item => item.id !== id);
 
-  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+//   localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
-  if (wishCount) {
-       wishCount.textContent = wishlist.length;
-  }
-
-
-  saveCart();
-  //saveWishlist();
-  updateCart();
-  //removeFromWishlist();
-  displayWishlist();
-}
+//   if (wishCount) {
+//        wishCount.textContent = wishlist.length;
+//   }
 
 
-document.addEventListener("click", function (e) {
-  if (document.querySelectorAll(".move-to-cart")) {
-    moveToCartFromWishlist(e);
-  }
-});
+//   saveCart();
+//   //saveWishlist();
+//   updateCart();
+//   //removeFromWishlist();
+//   displayWishlist();
+// }
+
+
+// document.addEventListener("click", function (e) {
+//   if (document.querySelectorAll(".move-to-cart")) {
+//     moveToCartFromWishlist(e);
+//   }
+// });
 
 //document.querySelectorAll('.move-to-cart')?.addEventListener('click', moveToCartFromWishlist());

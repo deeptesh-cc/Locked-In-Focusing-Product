@@ -347,6 +347,9 @@ section>.container-fluid {
     color: var(--theme-color2);
     width: 100%;
 }
+.form-control::placeholder, .form-control::-webkit-input-placeholder, .input-text::placeholder, .input-text::-webkit-input-placeholder{
+    color: #6c757d !important
+}
 label{
     font-size: 16px;
     font-weight: 500;
@@ -18884,35 +18887,25 @@ table.tbl-shopping-cart>tfoot>tr>th {
     margin-right: 4px;
 }
 
-.range-slider .title:before {
-    position: absolute;
-    content: "$";
-    left: -5px;
-    top: -19px;
-    color: #646578;
-    font-size: 18px;
-}
-
 .range-slider p {
     position: relative;
     display: inline-block;
-    color: #646578;
-    margin-right: 10px !important;
+    color: var(--theme-color2);
+    margin: 0;
 }
 
 .range-slider .input {
-    color: #646578;
-    max-width: 75px;
+    max-width: 60px;
     font-size: 18px;
-    margin-top: 5px;
+    margin-left: -9px;
     position: relative;
     display: inline-block;
 }
 
 .range-slider .input input {
     background: none;
-    color: #646578;
-    font-size: 15px;
+    color: var(--theme-color2);
+    font-size: 16px;
     text-align: left;
 }
 
@@ -21496,4 +21489,12 @@ input[type=number] {
     top: 50%;
     transform: translateY(-50%);
     padding: 0 30px;
+  }
+
+  .error-message{
+        font-size: 14px;
+    position: absolute;
+    display: block;
+    color: red;
+    margin-top: -8px;
   }
