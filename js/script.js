@@ -494,10 +494,13 @@ var THEMEMASCOT = {};
         $(".price-range-slider").slider({
             range: true,
             min: 10,
-            max: 99,
-            values: [10, 60],
+            max: 50,
+            values: [10, 30],
             slide: function(event, ui) {
-                $("input.property-amount").val(ui.values[0] + " - " + ui.values[1]);
+                minPrice = ui.values[0];
+                maxPrice = ui.values[1];
+                $("input.property-amount").val(`$${minPrice} - $${maxPrice}`);
+                filterProductsBySearchAndCategory(); // Re-filter on price change
             }
         });
         $("input.property-amount").val($(".price-range-slider").slider("values", 0) + " - $" + $(".price-range-slider").slider("values", 1));

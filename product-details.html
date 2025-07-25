@@ -221,7 +221,7 @@
 <div class="product-details__quantity gap-3">
 <div class="quantity-box">
 <button type="button" class="sub quantity-decrease">-</button>
-<input type="number" min="1" value="1" id="prod-qty-chng"/>
+<input type="number" min="1" value="1" id="prod-qty-chng"/ readonly>
 <button type="button" class="add quantity-increase">+</button>
 </div>
 <div class="product-details__buttons-1">
@@ -462,8 +462,6 @@
     let cartBtn = document.querySelector('.prodDtl-cart-btn');
     let qtyInput = document.getElementById('prod-qty-chng');
 
-    console.log(qtyInput);
-    
     //console.log(wishlist);
 
         wishlist.forEach((item) => {

@@ -47,7 +47,7 @@ function loadCart() {
     // Add each item in the cart to the display
     cart.forEach((item) => {
 
-      console.log(item);
+      //console.log(item);
       const listItem = document.createElement("div");
       listItem.className = "cart-item";
       listItem.innerHTML = `
@@ -253,17 +253,24 @@ function loadCart() {
 
   }
 
+  let minPrice = 10;
+  let maxPrice = 50;
+
   function filterProductsBySearchAndCategory() {
+
   const keyword = document.querySelector('.search-form input[type="search"]').value.trim().toLowerCase();
 
   const checkedCategories = Array.from(document.querySelectorAll('.prod-filt-input:checked'))
     .map(input => input.value);
 
   const allProducts = document.querySelectorAll('#product-list3 .product-block');
-
+//debugger;
+  const productContainer = document.getElementById('product-list3')
+  let found = false;
   allProducts.forEach(product => {
     const productName = product.dataset.name.toLowerCase();
     const productCategories = product.dataset.category.split(" ");
+    const price = parseFloat(product.dataset.price);
 
     // Search filter match
     const matchesSearch = productName.includes(keyword);
@@ -273,13 +280,22 @@ function loadCart() {
       checkedCategories.length === 0 || // if nothing selected, match all
       checkedCategories.some(val => productCategories.includes(val));
 
+    const matchesPrice = price >= minPrice && price <= maxPrice;
+
+    
+    if(matchesSearch) found = true;
+
     // Final condition: must match BOTH
-    if (matchesSearch && matchesCategory) {
+    if (matchesPrice && matchesSearch && matchesCategory) {
       product.style.display = 'block';
     } else {
       product.style.display = 'none';
     }
   });
+
+  if(!found)
+    productContainer.innerHTML = `<p class="text-center">Sorry! Product Not Found</p>`;
+  
 }
 
 // Search input listener
@@ -392,8 +408,10 @@ document.querySelectorAll('.prod-filt-input').forEach(input => {
     const name = productElement.dataset.name;
     const price = parseFloat(productElement.dataset.price);
     const image = productElement.dataset.image;
+    const quantity = productElement.dataset.quantity;
+
   
-    console.log(id);
+    //console.log(id);
     // Check if item is already in cart
     const existingItemIndex = cart.findIndex((item) => {
       if(item.id === id){
@@ -401,15 +419,33 @@ document.querySelectorAll('.prod-filt-input').forEach(input => {
       }
       return item.id === id;
       // console.log(id, item.id)
-      return false;
+      //return false;
     });
-    let currentValue =
-      Number(document.getElementById("prod-qty-chng")?.value) || 1;
+    let currentValue = (quantity)?Number(quantity):Number(document.getElementById("prod-qty-chng")?.value);
   
     if (existingItemIndex === -1) {
       // Add item to cart
       cart.push({ id, name, price, image, quantity: currentValue });
+
+      // const wishCount = document.getElementById('wish-count');
+
+      // let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+      // let shortListedItems = wishlist.find((item) => item.id==id);
+
+      // let index = wishlist.indexOf(shortListedItems);
+      
+      // wishlist.splice(index, 1);
+      // localStorage.setItem("wishlist",JSON.stringify(wishlist));
+
       alert('Product Added in Cart')
+
+      // displayWishlist();
+
+      // if (wishCount) {
+      //   wishCount.textContent = wishlist.length;
+      // }
+
     } else {
       // Item already in cart; optionally, handle quantity update here
       cart[existingItemIndex].quantity += 1;
@@ -609,6 +645,7 @@ document.querySelectorAll('.add-to-wishlist').forEach(button => {
 
           // Save updated wishlist to localStorage
           localStorage.setItem('wishlist', JSON.stringify(wishlist));
+          
 
           alert('Product added to your wishlist!');
       } else {
@@ -650,18 +687,22 @@ function displayWishlist() {
   
   wishlist.forEach(product => {
       const productHTML = `
-                <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-category="${product.category}" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+                <div class="product-block product-item home-style col-lg-3 col-md-6 col-sm-6" data-category="${product.category}" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" data-quantity="1">
                         <div class="inner-box bg-transparent">
                             <div class="image-area">
                                 <div class="inner">
-                                    <figure class="image mb-0"><img src="${product.image}" alt="${product.name}"></figure>
+                                    <figure class="image mb-0">
+                                      <a href="product-details.html?${product.id}">
+                                        <img src="${product.image}" alt="${product.name}">
+                                      </a>
+                                    </figure>
                                     <button class="icon like-btn remove-from-wishlist float-btn" data-id="${product.id}"><i class="fas fa-trash"></i></button>
                                    
                                 </div>
                             </div>
                             <div class="content-box">
                                     <div class="inner">
-                                        <h4 class="title"><a href="product-details.html">${product.name}</a></h4>
+                                        <h4 class="title"><a href="product-details.html?${product.id}">${product.name}</a></h4>
                                         <div class="rating">
                                           <img src="images/icons/star-rating.svg" width="87" class="d-inline-block">
                                           <span>(4.2)</span>
@@ -672,8 +713,8 @@ function displayWishlist() {
                                 </div>
 
                                 <div class="action-btns-area">
-                                            <a href="product-details.html" class="theme-btn btn-outline"><span class="btn-title">Buy Now</span></a>
-                                            <button class="icon ui-btn add-to-cart"><i class="fa-sharp fa-light fa-cart-shopping"></i></button>
+                                            <button class="theme-btn btn-outline w-100 move-to-cart" data-id="${product.id}"><span class="btn-title">Move To Cart</span></button>
+                                            
                                             
                                         </div>
                             
@@ -717,5 +758,54 @@ function removeFromWishlist(productId) {
 });
 }
 
-// Call displayWishlist() to show the wishlist on page load or whenever needed
+// to show the wishlist on page load or whenever needed
 displayWishlist();
+
+function moveToCartFromWishlist(event) {  
+  const productElement = event.target.closest(".product-item");
+  const id = productElement.dataset.id;
+  const name = productElement.dataset.name;
+  const price = parseFloat(productElement.dataset.price);
+  const image = productElement.dataset.image;
+  const quantity = productElement.dataset.quantity;
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  const wishCount = document.getElementById('wish-count');
+
+  console.log("clicked");
+
+  let currentValue = quantity ? Number(quantity) : Number(document.getElementById("prod-qty-chng")?.value || 1);
+
+  // Check if already in cart
+  const existingCartIndex = cart.findIndex(item => item.id === id);
+
+  if (existingCartIndex === -1) {
+    cart.push({ id, name, price, image, quantity: currentValue });
+  } else {
+    cart[existingCartIndex].quantity += currentValue;
+  }
+
+  // Remove from wishlist
+  wishlist = wishlist.filter(item => item.id !== id);
+
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+  if (wishCount) {
+       wishCount.textContent = wishlist.length;
+  }
+
+
+  saveCart();
+  //saveWishlist();
+  updateCart();
+  //removeFromWishlist();
+  displayWishlist();
+}
+
+
+document.addEventListener("click", function (e) {
+  if (document.querySelectorAll(".move-to-cart")) {
+    moveToCartFromWishlist(e);
+  }
+});
+
+//document.querySelectorAll('.move-to-cart')?.addEventListener('click', moveToCartFromWishlist());

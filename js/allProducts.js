@@ -101,7 +101,7 @@
     productList.forEach( (item, index) => {
       
     const productItem = `
-    <div class="product-block product-item home-style all mix ${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}">
+    <div class="product-block product-item home-style all mix ${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}" data-quantity="1">
                             <div class="inner-box bg-transparent">
                                 <div class="image-area">
                                     <figure class="image mb-0"><a href="product-details.html?id=${item.id}"><img src="${item.image}" alt="Image"></a></figure>
@@ -128,15 +128,21 @@
 
 
     const productItem2 = `
-    <div class="product-block product-item home-style all col-lg-4 col-md-6 col-sm-6" data-category="${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}">
+    <div class="product-block product-item home-style all col-lg-4 col-md-6 col-sm-6" data-category="${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}" data-quantity="1">
                             <div class="inner-box bg-transparent">
                                 <div class="image-area">
-                                    <figure class="image mb-0"><a href="product-details.html"><img src="${item.image}" alt="Image"></a></figure>
+                                    <figure class="image mb-0">
+                                      <a href="product-details.html?id=${item.id}">
+                                        <img src="${item.image}" alt="Image">
+                                      </a>
+                                    </figure>
                                     <button class="icon like-btn add-to-wishlist float-btn"><i class="fa-light fa-heart"></i></button>
                                 </div>
                                 <div class="content-box">
                                     <div class="inner">
-                                        <h4 class="title"><a href="product-details.html">${item.name}</a></h4>
+                                        <h4 class="title">
+                                          <a href="product-details.html?id=${item.id}">${item.name}</a>
+                                        </h4>
                                         <div class="rating">
                                           <img src="images/icons/star-rating.svg" width="87" class="d-inline-block">
                                           <span>(4.2)</span>
