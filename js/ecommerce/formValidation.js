@@ -21,69 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
  
-//   // 2. Render checkout summary
-//   renderCheckoutSummary();
- 
-//   function renderCheckoutSummary() {
-//     const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
-//     const container = document.getElementById("checkoutSummary");
- 
-//     if (!container) return;
- 
-//     if (cartItems.length === 0) {
-//       container.innerHTML = "<p>Your cart is empty.</p>";
-//       return;
-//     }
- 
-//     let subtotal = 0;
-//     let productHTML = "";
- 
-//     cartItems.forEach(item => {
-//       const itemTotal = item.price * item.quantity;
-//       subtotal += itemTotal;
- 
-//       productHTML += `
-//         <div class="checkout-item">
-//           <div class="checkout-item-inner">
-//             <a href="productdetails.html?id=${item.id}">
-//               <div class="checkout-image">
-//                 <img src="${item.image}" alt="${item.name}">
-//               </div>
-//               <div class="checkout-item-details">
-//                 <p>${item.name}</p>
-//                 <p>Qty: ${item.quantity}</p>
-//               </div>
-//             </a>
-//           </div>
-//           <div class="checkout-price">$${itemTotal.toFixed(2)}</div>
-//         </div>
-//       `;
-//     });
- 
-//     const total = subtotal.toFixed(2);
- 
-//     container.innerHTML = `
-//       <h3>Your Order</h3>
-//       <div class="checkout-wrap">
-//         ${productHTML}
-//         <div class="checkout-right-lower">
-//           <div class="d-flex justify-content-between checkout-right-row">
-//             <span>Cart Subtotal</span>
-//             <span id="cartSubtotal">$${total}</span>
-//           </div>
-//           <div class="d-flex justify-content-between checkout-right-row">
-//             <span>Shipping & Handling</span>
-//             <span class="free-text">FREE</span>
-//           </div>
-//         </div>
-//         <div class="d-flex justify-content-between checkout-total">
-//           <span>Order Total</span>
-//           <span id="orderTotal">$${total}</span>
-//         </div>
-//       </div>
-//     `;
-//   }
- 
   // 3. Form validation
   const form = document.getElementById('checkout-form');
   if (!form) {
