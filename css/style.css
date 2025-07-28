@@ -9,11 +9,11 @@
 @import url("jquery.fancybox.min.css");
 @import url("jquery-ui.css");
 @import url("linear.css");
-@import url("select2.min.css");
+/* @import url("select2.min.css"); */
 @import url("fontawesome.css");
-@import url("flaticon-set-logistics.css");
+/* @import url("flaticon-set-logistics.css");
 @import url("tm-bs-mp.css");
-@import url("tm-utility-classes.css");
+@import url("tm-utility-classes.css"); */
 :root {
     --theme-color1: #7A35FF;
     --theme-color2: #302742;
@@ -4017,11 +4017,14 @@ Main Header
 }
 @media (max-width: 575.98px) {
     .main-header .header-lower .outer-box .ui-btn, .main-header .sticky-header .outer-box .ui-btn {
-        margin-right: 0;
+        margin-right: 5px;
         margin-left: 0;
     }
+    .main-header .header-lower .logo-box{
+        flex: 0 0 165px;
+    }
     .main-header .logo img{
-        max-width: 150px;
+        max-width: 165px;
     }
 }
 
@@ -4433,10 +4436,10 @@ Main Header
     font-size: 28px;
     line-height: 20px;
     cursor: pointer;
-    color: var(--theme-color2);
+    color: var(--theme-color3);
     display: none;
     top: 0;
-    margin-left: 20px;
+    margin-left: 13px;
     -webkit-box-ordinal-group: 9;
     -ms-flex-order: 8;
     order: 8;
@@ -4679,7 +4682,9 @@ Main Header
 .mobile-menu .navigation li>ul>li {
     padding-left: 20px;
 }
-
+.mobile-menu .contact-list-one{
+    display: none;
+}
 .contact-list-one {
     position: relative;
     padding: 30px 20px 20px;
@@ -5201,12 +5206,30 @@ Section Title
     margin-bottom: 0;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px){
     .sec-title h2 {
-        font-size: 36px;
+        font-size: 48px;
     }
 }
-
+@media (max-width: 767.98px) {
+    .sec-title h2 {
+        font-size: 48px;
+    }
+}
+@media (max-width: 575.98px) {
+    .sec-pad{
+        padding: 50px 0 !important;
+    }
+    .sec-title h2 {
+        font-size: 40px;
+    }
+    .sec-title {
+        margin-bottom: 30px;
+    }
+    .aboutArea{
+        padding-bottom: 0 !important;
+    }
+}
 .sec-title .text {
     font-weight: var(--body-font-weight);
     font-size: 16px;
@@ -5343,23 +5366,30 @@ Section Title
 
 @media (max-width: 1199.98px) {
     .banner-section-one .content-box {
-        padding: 80px 0;
+        padding: 30px 0 90px;
+    }
+    .banner-section-one .content-box .title{
+        font-size: 52px !important;
     }
 }
 
 @media (max-width: 991.98px) {
     .banner-section-one .content-box {
-        padding: 70px 0;
+        padding: 40px 0;
         text-align: center;
     }
 }
 
 @media (max-width: 575.98px) {
-    .banner-section-one .content-box {
-        padding: 70px 0;
+    .heroBanArea {
+        padding-top: 100px !important;
     }
 }
-
+@media (max-width: 767.98px){
+    .banner-section-one .content-box {
+        padding: 30px 0;
+    }
+}
 .banner-section-one .content-box .image-shape {
     position: absolute;
     right: -93px;
@@ -5456,7 +5486,7 @@ Section Title
 
 @media (max-width: 767.98px) {
     .banner-section-one .content-box .title {
-        font-size: 40px;
+        font-size: 40px !important;
         margin-bottom: 30px;
         margin-right: 0;
     }
@@ -5464,8 +5494,16 @@ Section Title
 
 @media (max-width: 575.98px) {
     .banner-section-one .content-box .title {
-        font-size: 25px;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
+    }
+    .banner-section-one .content-box .text{
+        margin-bottom: 22px !important;
+    }
+    .offcanvas-end{
+        width: 320px;
+    }
+    .offcanvas .empty-cart{
+        padding: 0 20px !important;
     }
 }
 
@@ -5509,7 +5547,6 @@ Section Title
 @media (max-width: 575.98px) {
     .banner-section-one .content-box .btn-box .theme-btn {
         margin-right: 0;
-        margin-bottom: 20px;
     }
 }
 
@@ -9940,12 +9977,6 @@ Section Title
     transform: rotate(-9.55deg);
 }
 
-@media (max-width: 991.98px) {
-    .marquee-section-two {
-        padding: 50px 0;
-    }
-}
-
 .marquee-two {
     position: relative;
     --duration: 30s;
@@ -9987,21 +10018,37 @@ Section Title
     font-family: "Zen Dots", sans-serif;
 }
 
-@media (max-width: 1199.98px) {
-    .marquee-two .text {
-        font-size: 80px;
+@media (max-width: 991.98px) {
+    .marquee-section-two {
+        padding: 12px 0px;
+        bottom: 32%;
+        left: -35px;
+        transform: rotate(-14.65deg);
     }
 }
 
 @media (max-width: 767.98px) {
+    .marquee-section-two{
+        padding: 7px 0px;
+        bottom: 21%;
+        left: -30px;
+    }
+    .marquee-two .text:after {
+        left: 5px;
+        top: 7px;
+        height: 21px;
+        background-size: 100%;
+        width: 21px;
+    }
     .marquee-two .text {
-        font-size: 60px;
+        font-size: 18px;
+        margin-left: 10px;
     }
 }
 
 @media (max-width: 575.98px) {
-    .marquee-two .text {
-        font-size: 40px;
+    .marquee-section-two {
+       bottom: 15%;
     }
 }
 
@@ -13410,7 +13457,7 @@ Section Title
 
 @media (max-width: 991.98px) {
     .product-block.home-style {
-        margin-bottom: 40px;
+        margin-bottom: 15px;
     }
 }
 
@@ -13537,13 +13584,16 @@ Section Title
 .product-block.home-style .inner-box .content-box {
     margin: 15px 0 20px;
 }
-
 @media (max-width: 767.98px) {
     .product-block.home-style .inner-box .content-box {
         margin-bottom: 24px;
     }
 }
-
+@media (max-width: 575.98px) {
+    .product-block.home-style .inner-box .content-box{
+            margin-bottom: 15px;
+    }
+}
 .product-block.home-style .inner-box .content-box .inner {
     text-align: center;
 }
@@ -13553,12 +13603,6 @@ Section Title
     font-family: var(--title-font);
     font-size: 18px;
     font-weight: 500;
-}
-
-@media (max-width: 767.98px) {
-    .product-block.home-style .inner-box .content-box .inner .price {
-        font-size: 24px;
-    }
 }
 
 .product-block.home-style .inner-box .content-box .inner .price .price-style {
@@ -13590,7 +13634,7 @@ Section Title
 
 @media (max-width: 767.98px) {
     .product-block.home-style .inner-box .content-box .inner .title {
-        font-size: 24px;
+        font-size: 21px;
         margin-top: 6px;
     }
 }

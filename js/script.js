@@ -238,16 +238,25 @@ var THEMEMASCOT = {};
             navText: ['<img src="images/icons/owl-nav-ico-left.svg">', '<img src="images/icons/owl-nav-ico-right.svg">'],
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    stagePadding: 50,
+                    loop: true
+                },
+                576: {
+                    items: 2,
+                    stagePadding: 0
                 },
                 768: {
-                    items: 2
+                    items: 3,
+                    stagePadding: 0
                 },
                 992: {
-                    items: 3
+                    items: 3,
+                    stagePadding: 0
                 },
                 1200: {
-                    items: 4
+                    items: 4,
+                    stagePadding: 0
                 },
             }
         });

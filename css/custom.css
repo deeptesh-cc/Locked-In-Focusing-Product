@@ -485,3 +485,42 @@ footer .social-links li a{
 .move-to-cart .fa-cart-shopping{
     display: none;
 }
+
+@media (max-width: 575.98px){
+    .featBlockWrap{
+        margin-bottom: 20px;
+    }
+    .product-block .inner-box{
+        padding: 25px 25px 30px;
+    }
+    .product-block .image img{
+        height: 185px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+    .product-block .image img{
+        height: 165px;
+    }
+    .product-block .inner-box{
+        border-radius: 20px;
+        padding: 25px 25px 30px;
+    }
+}
+@media (max-width: 991.98px){
+    .featBlockWrap .overlayContent{
+        padding: 30px !important;
+    }
+    .featBlockWrap .overlayContent h3 {
+        font-size: 32px;
+    }
+    .featBlockWrap .overlayContent a{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 20px;
+    }
+}
