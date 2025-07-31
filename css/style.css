@@ -12433,14 +12433,14 @@ Section Title
     color: var(--theme-color2);
     font-weight: 600;
     cursor: pointer;
-    padding: 24px 0;
+    padding: 24px 40px 24px 0;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 @media (max-width: 575.98px) {
     .accordion-box.style-three .block .acc-btn {
-        padding: 15px 14px 15px 0;
+        padding: 19px 40px 19px 0;
     }
 }
 
@@ -15449,13 +15449,13 @@ Section Title
 
 @media (max-width: 991.98px) {
     .main-footer .about-widget {
-        text-align: left !important;
-        margin-bottom: 50px;
+        
     }
 }
 
 .main-footer .about-widget .logo {
     margin-bottom: 25px;
+    max-width: 300px;
 }
 
 .main-footer .about-widget .text {
@@ -15496,8 +15496,7 @@ Section Title
 
 @media (max-width: 991.98px) {
     .main-footer .footer-widget .widget-title {
-        margin-bottom: 20px;
-        font-size: 28px;
+
     }
 }
 
@@ -15619,9 +15618,7 @@ Section Title
 }
 
 @media (max-width: 1199.98px) {
-    .footer-style-two .about-widget {
-        margin-bottom: 50px;
-    }
+    
 }
 
 .footer-style-two .about-widget .text {
@@ -15749,7 +15746,7 @@ Section Title
 
 @media (max-width: 1199.98px) {
     .links-widget {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         left: 0;
     }
 }
@@ -15810,7 +15807,7 @@ Section Title
 
 @media (max-width: 991.98px) {
     .footer-bottom .inner-container .copyright-text {
-        font-size: 14px;
+        
     }
 }
 

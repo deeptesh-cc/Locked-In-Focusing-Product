@@ -234,6 +234,7 @@
 footer .social-links{
     display: flex;
     column-gap: 15px;
+        margin-bottom: 30px;
 }
 footer .social-links li a{
     color: var(--theme-color3);
@@ -539,5 +540,17 @@ footer .social-links li a{
             bottom: 0;
             right: 0;
             margin: 20px;
+    }
+    .footer-bottom{
+        text-align: center;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .review-plat-block .info{
+        padding-left: 0;
+        text-align: center;
+    }
+    .review-plat-block .info::before{
+        display: none;
     }
 }
