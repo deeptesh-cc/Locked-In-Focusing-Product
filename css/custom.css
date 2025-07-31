@@ -170,6 +170,8 @@
 .counterArea{
     background: rgb(52, 0, 149);
     background: url('../images/background/counter-bg.png') no-repeat, radial-gradient(circle, #340095 0%, #160040 100%);
+    background-size: cover;
+    background-position: center;
 }
 @media (min-width:1200px) {
     .counterArea .sec-title h2{
@@ -496,6 +498,16 @@ footer .social-links li a{
     .product-block .image img{
         height: 185px;
     }
+    .lead {
+        font-size: 1.15rem;
+    }
+    .review-plat-block .info{
+        padding-left: 0;
+        text-align: center;
+    }
+    .review-plat-block .info::before{
+        display: none;
+    }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
     .product-block .image img{
@@ -504,6 +516,11 @@ footer .social-links li a{
     .product-block .inner-box{
         border-radius: 20px;
         padding: 25px 25px 30px;
+    }
+    .counter-block-two{
+        border-right: 0;
+        border-bottom: 1px solid var(--theme-color3);
+        padding: 20px 0;
     }
 }
 @media (max-width: 991.98px){

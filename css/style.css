@@ -12669,11 +12669,6 @@ Section Title
 .counter-block-two:last-child{
     border-right: 0;
 }
-@media (max-width: 991.98px) {
-    .counter-block-two {
-        margin-bottom: 40px;
-    }
-}
 
 .counter-block-two .inner {
     position: relative;
@@ -12742,12 +12737,6 @@ Section Title
     font-family: var(--title-font);
 }
 
-@media (max-width: 1199.98px) {
-    .counter-block-two .count-box .count-text {
-        font-size: 42px;
-    }
-}
-
 .counter-block-two .counter-title {
     display: block;
     font-size: 21px;
@@ -12755,6 +12744,20 @@ Section Title
     font-weight: 400;
     margin-bottom: 0;
     margin-top: 10px;
+}
+
+@media (max-width: 575.98px) {
+    .counter-block-two .count-box .count-text {
+        font-size: 28px;
+    }
+    .counter-block-two .count-box .sup{
+        font-size: 18px;
+        margin-left: 3px;
+    }
+    .counter-block-two .counter-title{
+        font-size: 18px;
+        margin-top: 5px;
+    }
 }
 
 /*** 
@@ -13111,12 +13114,6 @@ Section Title
 .testimonial-block-three .inner-box {
     overflow: hidden;
     position: relative;
-}
-
-@media (max-width: 991.98px) {
-    .testimonial-block-three .inner-box {
-        padding: 38px 30px 30px;
-    }
 }
 
 .testimonial-block-three .inner-box .img-1 {
