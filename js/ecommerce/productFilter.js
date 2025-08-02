@@ -12,6 +12,9 @@ let maxPrice = 50;
   const allProducts = document.querySelectorAll('#product-list3 .product-block');
 //debugger;
   const message = document.querySelector('#product-list3 .notFound')
+
+  let visibleCount = 0;
+
   allProducts.forEach(product => {
     const productName = product.dataset.name.toLowerCase();
     const productCategories = product.dataset.category.split(" ");
@@ -30,17 +33,26 @@ let maxPrice = 50;
     // Final condition: must match ALL
     if (matchesPrice && matchesSearch && matchesCategory) {
       product.style.display = 'block';
+      visibleCount++;
+      //console.log(visibleCount);
     } 
     else{
       product.style.display = 'none';
     } 
 
-    if(!matchesSearch || !matchesPrice){
-       message.textContent = "Sorry! Product Not Found"
-    } 
-    else{
+    // Show/hide "no product found" message
+    if (visibleCount === 0) {
+      message.textContent = "Sorry! Product Not Found"
+    } else {
       message.textContent = ""
     }
+
+    // if(!matchesSearch || !matchesPrice){
+    //    message.textContent = "Sorry! Product Not Found"
+    // } 
+    // else{
+    //   message.textContent = ""
+    // }
 
   });
 

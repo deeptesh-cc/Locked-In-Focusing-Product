@@ -174,9 +174,9 @@
 <section class="product-details sec-pad">
 	<div class="container" id="prod-dtl-container">
 		
-		<div class="product-item-dtl product-block" id="product-details" data-id="" data-name="" data-mrp="" data-price="" data-image="">
+		<div class="product-item-dtl product-block mb-0" id="product-details" data-id="" data-name="" data-mrp="" data-price="" data-image="">
 <div class="row">
-<div class="col-lg-6 col-xl-5">
+<div class="col-md-6 col-lg-6 col-xl-5">
     <div class="prod-gal-area mb-4 mb-lg-0">
         <div id="prod-gal-sync1" class="owl-carousel owl-theme">
           <div class="item">
@@ -189,7 +189,7 @@
             <img src="" class="img-fluid product-image" alt="">
           </div> -->
           
-      </div>
+        </div>
       
       <div id="prod-gal-sync2" class="owl-carousel owl-theme">
         <div class="item">
@@ -202,9 +202,9 @@
          <img src="" class="img-fluid product-image" alt="">
        </div> -->
       </div>
-      </div>
+    </div>
 </div>
-<div class="col-lg-6 col-xl-7 product-info">
+<div class="col-md-6 col-lg-6 col-xl-7 product-info">
 <div class="product-details__top mb-4">
 <h3 class="product-details__title" id="product-name"> </h3>
 <div class="product-details__reveiw">
@@ -216,22 +216,26 @@
 </div>
 
 <div class="product-details__content">
-<p class="product-details__content-text1 mb-5" id="prod-dtl-desc"></p>
+<p class="product-details__content-text1 mb-4 mb-lg-5" id="prod-dtl-desc"></p>
 </div>
 <div class="product-details__quantity gap-3">
-<div class="quantity-box">
-<button type="button" class="sub quantity-decrease">-</button>
-<input type="number" min="1" value="1" id="prod-qty-chng"/ readonly>
-<button type="button" class="add quantity-increase">+</button>
-</div>
-<div class="product-details__buttons-1">
-<div class="theme-btn btn-style-one "><button class="add-to-cart prodDtl-cart-btn"></button>
-   <span class="btn-title ps-2">Add To Cart</span>
-</div>
-</div>
-<div class="product-details__buttons-2">
-   <button class="add-to-wishlist prodDtl-wish-btn"></button>
-</div>
+    
+        <div class="quantity-box">
+        <button type="button" class="sub quantity-decrease">-</button>
+        <input type="number" min="1" value="1" id="prod-qty-chng"/ readonly>
+        <button type="button" class="add quantity-increase">+</button>
+        </div>
+        <div class="d-flex flex-wrap gap-3">
+            <div class="product-details__buttons-1">
+            <div class="theme-btn btn-style-one "><button class="add-to-cart prodDtl-cart-btn"></button>
+            <span class="btn-title ps-2">Add To Cart</span>
+            </div>
+            </div>
+            <div class="product-details__buttons-2">
+            <button class="add-to-wishlist prodDtl-wish-btn"></button>
+            </div>
+        </div>
+    
 </div>
 <div class="mt-5 mb-4">
     <div class="secure-box d-inline-block">
@@ -392,113 +396,10 @@
     <script src="js/ecommerce/changeQuantity.js"></script>
     <script src="js/ecommerce/productFilter.js"></script>
     <script src="js/ecommerce/addToWishlist.js"></script>
+    <script src="js/ecommerce/productDetails.js"></script>
 
     <!-- UI Script -->
     <script src="js/script.js"></script>
 
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const productId = parseInt(params.get('id'), 10);
-    //console.log(productId);
-
-    //console.log(productList)
-    
-
-    const product = productList.find(p => p.id === productId);
-
-    // if (product) {
-    //     document.getElementById('product-details').forEach((item) => {
-    //         item.dataset.id = product.id
-    //         item.dataset.name = product.name
-    //         item.dataset.price = product.price
-    //         item.dataset.image = product.image
-    //     })
-    // }
-
-    
-    if (product) {
-        document.getElementById('product-details').dataset.id = product.id
-        document.getElementById('product-details').dataset.name = product.name
-        document.getElementById('product-details').dataset.price = product.price
-        document.getElementById('product-details').dataset.image = product.image
-        document.getElementById('product-details').dataset.mrp = product.mrp
-        document.querySelector('.quantity-box .quantity-decrease').dataset.id = product.id
-        document.querySelector('.quantity-box .quantity-increase').dataset.id = product.id
-        document.getElementById('prod-qty-chng').dataset.id = product.id
-        document.querySelector('.prodDtl-wish-btn').dataset.id = product.id
-        document.querySelector('.prodDtl-cart-btn').dataset.id = product.id
-    }
-
-    if (product) {
-      document.getElementById('product-name').textContent = product.name;
-      document.getElementById('prod-dtl-desc').textContent = product.description;
-    //    console.log("document.getElementById('product-category')",document.getElementById('product-category'));
-    //document.querySelectorAll('.product-image').src = product.image;
-
-    document.querySelectorAll('.product-image').forEach((img) => {
-        img.src = product.image
-    })
-    document.querySelectorAll('.product-image2').forEach((img) => {
-        img.src = product.image2
-    })
-    //console.log(product.image);
-    
-        document.querySelectorAll('.product-image').forEach((img) => {
-            img.alt = product.name;
-        })
-        document.querySelectorAll('.product-image2').forEach((img) => {
-            img.alt = product.name;
-        })
-      document.getElementById('product-mrp').textContent = `$${product.mrp.toFixed(2)}`;
-      document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
-      //document.getElementById('product-category').textContent = product.category;
-    } else {
-      document.getElementById('product-details').innerHTML = "<p>Product not found.</p>";
-    }
-  </script>
-
-  <script>
-    
-    // console.log(wishlist);
-    // console.log(wishBtn.dataset.id);
-    function productDetailsDataCheck() {
-        
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    let cartData = JSON.parse(localStorage.getItem("cart")) || [];
-    let wishBtn = document.querySelector('.prodDtl-wish-btn');
-    let cartBtn = document.querySelector('.prodDtl-cart-btn');
-    let qtyInput = document.getElementById('prod-qty-chng');
-
-    //console.log(wishlist);
-
-        wishlist.forEach((item) => {
-            if (item.id == wishBtn.dataset.id) {
-                wishBtn.innerHTML = `<i class="fas fa-heart"></i>`;
-                //debugger
-               
-            //console.log("Deep");
-            }
-        })
-        // if(cartBtn){
-        //     cartBtn.innerHTML = `<i class="fa-sharp fa-light fa-cart-shopping"></i> Add to Cart`;
-        // }
-        cartData.forEach((item) => {
-            if (item.id == cartBtn.dataset.id) {
-                cartBtn.innerHTML = `<i class="fas fa-shopping-cart"></i>`;
-            }
-            if (item.id == qtyInput.dataset.id) {
-                //console.log(item);
-                
-                qtyInput.value = item.quantity;
-            }
-        })
-    }
-    
-    productDetailsDataCheck();
-
-  </script>
-
-  
 </body>
 </html>

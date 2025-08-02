@@ -101,7 +101,7 @@
     productList.forEach( (item, index) => {
       
     const productItem = `
-    <div class="product-block product-item home-style all mix ${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}" data-quantity="1">
+    <div class="product-block product-item home-style ${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}" data-quantity="1">
                             <div class="inner-box bg-transparent">
                                 <div class="image-area">
                                     <figure class="image mb-0"><a href="product-details.html?id=${item.id}"><img src="${item.image}" alt="Image"></a></figure>
@@ -128,7 +128,7 @@
 
 
     const productItem2 = `
-    <div class="product-block product-item home-style all col-lg-4 col-md-6 col-sm-6" data-category="${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}" data-quantity="1">
+    <div class="product-block product-item home-style col" data-category="${item.category}" data-id="${item.id}" data-name="${item.name}" data-mrp="${item.mrp}" data-price="${item.price}" data-image="${item.image}" data-quantity="1">
                             <div class="inner-box bg-transparent">
                                 <div class="image-area">
                                     <figure class="image mb-0">
