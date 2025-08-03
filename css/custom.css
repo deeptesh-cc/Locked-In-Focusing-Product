@@ -451,9 +451,9 @@ footer .social-links li a{
     color: var(--theme-color2);
 }
 .loginAreaLeft{
-    max-width: 500px;
+    max-width: 530px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 15px;
 }
 .loginAreaLeft .from-area{
     margin-top: 70px;
@@ -461,6 +461,9 @@ footer .social-links li a{
 .terms-content-area h4{
     font-size: 24px;
     font-family: var(--text-font);
+}
+.login-area .auth-bg{
+    min-height: 100vh;
 }
 .login-area .auth-bg .overlayContent{
     background: #302742;
@@ -585,6 +588,16 @@ footer .social-links li a{
         font-size: 32px;
         font-weight: 600;
     }
+    .loginAreaLeft .from-area {
+        margin-top: 50px;
+    }
+    .loginAreaLeft{
+        padding: 20px 15px;
+    }
+    .loginAreaLeft .from-area h3{
+        font-size: 32px;
+        font-weight: 600;
+    }
 }
 @media (min-width: 768px) and (max-width: 991.98px){
     .product-block .image img{
@@ -614,6 +627,9 @@ footer .social-links li a{
     .product-details .product-info .product-details__title {
         font-size: 36px;
         font-weight: 600;
+    }
+    .loginAreaLeft {
+        padding: 30px 15px;
     }
 }
 @media (min-width: 768px){
@@ -658,6 +674,9 @@ footer .social-links li a{
     .product-details .pricing-area{
         font-size: 24px;
     }
+    .login-area .logo-area{
+        margin: 0 auto;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199.98px){
     .review-plat-block .info{
@@ -683,4 +702,7 @@ footer .social-links li a{
         text-overflow: ellipsis;
         font-weight: 400;
     }
+    .loginAreaLeft {
+        padding: 30px 15px;
+    }   
 }

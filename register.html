@@ -28,28 +28,47 @@
                     </div>
                     
                     <div class="from-area">
-                        <h3 class="mb-4">Welcome Back!</h3>
-                        <form id="loginForm" name="loginForm" class action="" method="">
+                        <h3 class="mb-4">Register Now!</h3>
+                        <form id="registerForm" name="registerForm" class action="" method="">
                             <div class="row">
+                            <div class="col-md-6">
+                            <div class="mb-3">
+                            <label class="required">First Name</label>
+                            <input name="regFirstName" class="form-control" type="text" id="regFirstName" placeholder="" required>
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="mb-3">
+                            <label class="required">Last Name</label>
+                            <input name="regLastName" class="form-control" type="text" id="regLastName" placeholder="" required>
+                            </div>
+                            </div>
                             <div class="col-sm-12">
                             <div class="mb-3">
-                            <label class="required">Registerd Email</label>
-                            <input name="userEmail" class="form-control" type="email" id="userEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="" required>
+                            <label class="required">Email Address</label>
+                            <input name="regEmail" class="form-control" type="email" id="regEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="" required>
                             </div>
                             </div>
                             </div>
                             <div class="col-sm-12">
                             <div class="mb-3">
                             <label class="required">Password</label>
-                            <input name="userPassword" class="form-control" type="password" id="userPassword" placeholder="" required>
+                            <input name="regPassword" class="form-control" type="password" id="regPassword" placeholder="" minlength="8" required>
+                            
+                            </div>
+                            </div>
+                            <div class="col-sm-12">
+                            <div class="mb-3">
+                            <label class="required">Confirm Password</label>
+                            <input name="confirmPassword" class="form-control" type="password" id="confirmPassword" placeholder="" minlength="8" required>
                             </div>
                             </div>
 
                             <div class="mb-5 mt-4">
-                            <button type="submit" class="theme-btn btn-style-one w-100"><span class="btn-title">Login</span></button>
+                            <button type="submit" class="theme-btn btn-style-one w-100" data-loading-text="Please wait..."><span class="btn-title">Register</span></button>
                             </div>
                         </form>
-                        <label class="d-block">Don’t have an account? <a href="register.html" class="color1">Register here</a></label>
+                        <label class="d-block">Already have an account? <a href="login.html" class="color1">login now</a></label>
                     </div>
                 </div>
             </div>
