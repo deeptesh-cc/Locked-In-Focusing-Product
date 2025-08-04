@@ -11,6 +11,11 @@ document.getElementById("registerForm")?.addEventListener("submit", function(eve
     // let message = '';
     // errorDiv.textContent = message;
 
+    if (localStorage.getItem(email)) {
+        alert("You already have an account with this email.");
+        return;
+    }
+
     if (password !== confirmPassword){
         alert('Passwords do not match')
         return;
@@ -53,3 +58,49 @@ document.getElementById("registerForm")?.addEventListener("submit", function(eve
         alert("Account not found");
     }
  });
+
+
+document.getElementById("forgotPasswordForm")?.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("regUserEmail").value.trim().toLowerCase();
+    const newPassword = document.getElementById("newPassword").value;
+    const confirmPassword = document.getElementById("confirmNewPassword").value;
+
+    // Validate password match
+    if (newPassword !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    // Check if user is already registered
+    const existingUser = localStorage.getItem(email);
+
+    if (existingUser) {
+        const parsedUser = JSON.parse(existingUser);
+        parsedUser.password = newPassword;
+
+        localStorage.setItem(email, JSON.stringify(parsedUser));
+        alert("Password has been successfully updated. Please login with your new password.");
+        window.location.href = "login.html";
+    } else {
+        alert("This email is not registered.");
+    }
+});
+
+const passwordInputs = document.querySelectorAll('.passwordInput');
+const togglePasswords = document.querySelectorAll('.togglePassword');
+
+togglePasswords.forEach((toggleBtn, index) => {
+  toggleBtn.addEventListener('click', function () {
+    const input = passwordInputs[index];
+
+    if (input.type === 'password') {
+      input.type = 'text';
+      toggleBtn.innerHTML = '<i class="far fa-eye-slash"></i>';
+    } else {
+      input.type = 'password';
+      toggleBtn.innerHTML = '<i class="far fa-eye"></i>';
+    }
+  });
+});

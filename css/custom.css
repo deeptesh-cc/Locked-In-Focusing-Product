@@ -492,7 +492,13 @@ footer .social-links li a{
 .move-to-cart .fa-cart-shopping{
     display: none;
 }
-
+.togglePassword{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    line-height: 1;
+}
 @media (max-width: 575.98px){
     .featBlockWrap{
         margin-bottom: 20px;
