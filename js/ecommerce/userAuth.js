@@ -104,3 +104,14 @@ togglePasswords.forEach((toggleBtn, index) => {
     }
   });
 });
+
+
+const userMessage = document.getElementById("userState");
+let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser") || "null");
+
+if (loggedInUser) {
+     //let parsedUser = JSON.parse(loggedInUser);
+    userMessage.innerHTML = `Hi, ${loggedInUser.firstname}`
+}else{
+    userMessage.innerHTML = `Please login to your account.`
+}

@@ -498,6 +498,7 @@ footer .social-links li a{
     transform: translateY(-50%);
     right: 15px;
     line-height: 1;
+    cursor: pointer;
 }
 @media (max-width: 575.98px){
     .featBlockWrap{
