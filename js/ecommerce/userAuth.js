@@ -111,7 +111,16 @@ let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser") || "null");
 
 if (loggedInUser) {
      //let parsedUser = JSON.parse(loggedInUser);
-    userMessage.innerHTML = `Hi, ${loggedInUser.firstname}`
+    userMessage.innerHTML = `<p>Hi, <span>${loggedInUser.firstname}</span></p>
+                                    
+                                  <button class="btn-style-one w-100 d-block text-center" id="logoutButton">Logout</button>`
 }else{
-    userMessage.innerHTML = `Please login to your account.`
+    userMessage.innerHTML = `<p>Please Login or Register to your account</p>
+                                    <a class="btn-outline w-100 d-block text-center mb-2" href="login.html">Login</a>
+                                    <a class="btn-style-one w-100 d-block text-center" href="register.html">Register</a>`
 }
+
+document.getElementById("logoutButton")?.addEventListener("click", function(){
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "login.html"
+})
