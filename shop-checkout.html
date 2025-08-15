@@ -481,5 +481,12 @@
     <!-- UI Script -->
     <script src="js/script.js"></script>
 
+    <script>
+        if (!loggedInUser) {
+            alert('You need to login to proceed to checkout')
+            window.location.href = "index.html";
+        }
+    </script>
+
 </body>
 </html>
